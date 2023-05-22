@@ -4,7 +4,7 @@
 設定ツール : 1.2.1.0 (1.2.0.0ベース)
 
 
-#  REVIVE USB ADVANCE Custom (Analog 2pin / Digital 21pin)
+##  REVIVE USB ADVANCE Custom (Analog 2pin / Digital 21pin)
 
 
 株式会社ビット・トレード・ワンが販売しているREVIVE USB ADVANCEのファームウェアおよびWindowsアプリケーション  
