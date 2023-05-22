@@ -6,7 +6,7 @@
 
 
 //ADC
-#define AD_INPUT_NUM    8
+#define AD_INPUT_NUM    2
 //#define AD_CH0_IDX      0
 //#define AD_CH1_IDX      1
 //#define AD_CH2_IDX      2
@@ -18,12 +18,12 @@
 //#define AD_CH8_IDX      8
 #define ANALOG1_CH_NUM   10
 #define ANALOG2_CH_NUM   0
-#define ANALOG3_CH_NUM   1
-#define ANALOG4_CH_NUM   2
-#define ANALOG5_CH_NUM   3
-#define ANALOG6_CH_NUM   4
-#define ANALOG7_CH_NUM   5
-#define ANALOG8_CH_NUM   6
+//#define ANALOG3_CH_NUM   1
+//#define ANALOG4_CH_NUM   2
+//#define ANALOG5_CH_NUM   3
+//#define ANALOG6_CH_NUM   4
+//#define ANALOG7_CH_NUM   5
+//#define ANALOG8_CH_NUM   6
 
 
 //#define AD_1_IDX        0

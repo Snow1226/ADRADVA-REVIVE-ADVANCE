@@ -46,6 +46,12 @@ void Switch_Input(void)
     sw_now[SW_13_NO_IDX] 	= SW_13_NO;
     sw_now[SW_14_NO_IDX] 	= SW_14_NO;
     sw_now[SW_15_NO_IDX] 	= SW_15_NO;
+    sw_now[SW_16_NO_IDX] 	= SW_16_NO;
+    sw_now[SW_17_NO_IDX] 	= SW_17_NO;
+    sw_now[SW_18_NO_IDX] 	= SW_18_NO;
+    sw_now[SW_19_NO_IDX] 	= SW_19_NO;
+    sw_now[SW_20_NO_IDX] 	= SW_20_NO;
+    sw_now[SW_21_NO_IDX] 	= SW_21_NO;
 
     for( fi = 0; fi < SW_NUM; fi++ )
     {

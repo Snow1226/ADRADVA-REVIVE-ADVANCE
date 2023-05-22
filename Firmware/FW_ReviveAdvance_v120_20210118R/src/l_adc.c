@@ -16,7 +16,7 @@ BYTE ad_input_average_buff_no = 0;
 //BYTE ad_input_comp_v12bit[AD_INPUT_NUM] = {0};
 
 WORD zero_offset[AD_INPUT_NUM] = {0};
-BYTE ad_input_ch_no[AD_INPUT_NUM] = {ANALOG1_CH_NUM, ANALOG2_CH_NUM, ANALOG3_CH_NUM, ANALOG4_CH_NUM, ANALOG5_CH_NUM, ANALOG6_CH_NUM, ANALOG7_CH_NUM, ANALOG8_CH_NUM };
+BYTE ad_input_ch_no[AD_INPUT_NUM] = {ANALOG1_CH_NUM, ANALOG2_CH_NUM }; //, ANALOG3_CH_NUM, ANALOG4_CH_NUM, ANALOG5_CH_NUM, ANALOG6_CH_NUM, ANALOG7_CH_NUM, ANALOG8_CH_NUM };
 
 BYTE ad_input_req = 0;
 WORD ad_input_time_counter = 0;
@@ -85,6 +85,7 @@ WORD l_adc_input(BYTE p_ad_no)
             case 1: // アナログ2
                 AD1CHS = 0x00000000;    // Connect AN0 as CH0 input int this example AN0 is the input
                 break;
+            /*
             case 2: // アナログ3
                 AD1CHS = 0x00010000;    // Connect AN1 as CH1 input int this example AN1 is the input
                 break;
@@ -103,6 +104,7 @@ WORD l_adc_input(BYTE p_ad_no)
             case 7: // アナログ8
                 AD1CHS = 0x00060000;    // Connect AN6 as CH6 input int this example AN6 is the input
                 break;
+                */
             default:
                 ad_ch_no_error = 1;
                 break;

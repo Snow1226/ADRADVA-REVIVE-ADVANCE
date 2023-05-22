@@ -1,0 +1,8 @@
+﻿################################################################################
+# この .gitignore ファイルは Microsoft(R) Visual Studio によって自動的に作成されました。
+################################################################################
+
+/.vs/ADRADVA-REVIVE-ADVANCE/FileContentIndex
+/.vs/ADRADVA-REVIVE-ADVANCE/v17/.wsuo
+/.vs/VSWorkspaceState.json
+/.vs/slnx.sqlite

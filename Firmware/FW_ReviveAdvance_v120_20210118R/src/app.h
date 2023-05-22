@@ -84,9 +84,15 @@ typedef union
 #define SW_13_NO            PORTCbits.RC8
 #define SW_14_NO            PORTCbits.RC9
 #define SW_15_NO            PORTBbits.RB13
-#define SW_NUM				15		// SW入力数
+#define SW_16_NO            PORTAbits.RA1            
+#define SW_17_NO            PORTBbits.RB0
+#define SW_18_NO            PORTBbits.RB1
+#define SW_19_NO            PORTBbits.RB2
+#define SW_20_NO            PORTBbits.RB3
+#define SW_21_NO            PORTCbits.RC0
+#define SW_NUM				21		// SW入力数
 #define SW_IDX_MIN          0       // SW インデックス最小値
-#define SW_IDX_MAX          14      // SW インデックス最大値
+#define SW_IDX_MAX          20      // SW インデックス最大値
 #define	SW_1_NO_IDX			0
 #define	SW_2_NO_IDX			1
 #define	SW_3_NO_IDX			2
@@ -102,6 +108,12 @@ typedef union
 #define	SW_13_NO_IDX		12
 #define	SW_14_NO_IDX		13
 #define	SW_15_NO_IDX		14
+#define	SW_16_NO_IDX		15
+#define	SW_17_NO_IDX		16
+#define	SW_18_NO_IDX		17
+#define	SW_19_NO_IDX		18
+#define	SW_20_NO_IDX		19
+#define	SW_21_NO_IDX		20
 #define SW_ON_DEBOUNCE_TIME		20		// SW ONデバウンスタイム
 #define SW_OFF_DEBOUNCE_TIME	20		// SW OFFデバウンスタイム
 
@@ -286,7 +298,7 @@ typedef union
 #define ANALOG_VOLTAGE_MAX_VALUE        330     // 330 =  3.3V * 100
             
 // SW 設定
-#define SW_SETTING_NUM                  15      // 設定数 sw 15
+#define SW_SETTING_NUM                  21      // 設定数 sw 15
 #define SW_DATA_LEN                     0x10    // SW設定データ長
 
 #define SW_DATA_SET_DEVICE_TYPE_IDX         0   // SW設定データ  デバイスタイプ格納位置
@@ -341,7 +353,7 @@ typedef union
 #define SW_SET_TYPE_JOYSTICK_NUM                    0   // 設定タイプ　ジョイスティック　設定数
 
 // ANALOG 設定
-#define ANALOG_SETTING_NUM                  8      // 設定数 ANALOG 8
+#define ANALOG_SETTING_NUM                  2      // 設定数 ANALOG 8
 #define ANALOG_DEVICE_DATA_LEN              0x20    // ANALOGデバイス設定データ長
 
 #define ANALOG_DATA_SET_TYPE_IDX            0   // アナログ設定データ  セットタイプ格納位置

@@ -98,7 +98,7 @@
 /** DECLARATIONS ***************************************************/
 
 /** VARIABLES ******************************************************/
-int8_t	c_version[]="1.2.0";
+int8_t	c_version[]="1.2.0c";
 
 BYTE ReceivedDataBuffer[RX_DATA_BUFFER_SIZE] RX_DATA_BUFFER_ADDRESS;
 BYTE ToSendDataBuffer[TX_DATA_BUFFER_SIZE] TX_DATA_BUFFER_ADDRESS;
@@ -340,13 +340,13 @@ void UserInit(void)
     USBInHandle = 0;
 
 
-    ANSELA = 0x00000003;    // Digital Input (b1=AN1, b0=AN0)
-    ANSELB = 0x0000400F;    // Digital Input (b15=AN9, b14=AN10, b13=AN11, b3=AN5, b2=AN4, b1=AN3, b0=AN2)
-    ANSELC = 0x00000001;    // Digital Input (b3=AN12, b2=AN8, b1=AN7, b0=AN6)
+    ANSELA = 0x00000001;    // Digital Input (b1=AN1, b0=AN0)
+    ANSELB = 0x00004000;    // Digital Input (b15=AN9, b14=AN10, b13=AN11, b3=AN5, b2=AN4, b1=AN3, b0=AN2)
+    ANSELC = 0x00000000;    // Digital Input (b3=AN12, b2=AN8, b1=AN7, b0=AN6)
     
     TRISA = 0x0193;     // RA0-4,7-10
     //RA0 = アナログ2 入力 (AN0)
-    //RA1 = アナログ3 入力 (AN1)
+    //RA1 = アナログ3 入力 (AN1) → D15入力
     //RA2 =
     //RA3 =
     //RA4 = EEPROM SDI 入力
@@ -355,10 +355,10 @@ void UserInit(void)
     //RA9 = EEPROM SS 出力
     //RA10 = 
     TRISB = 0x63BF;     // RB0-15
-    //RB0 = アナログ4 入力 (AN2)
-    //RB1 = アナログ5 入力 (AN3)
-    //RB2 = アナログ6 入力 (AN4)
-    //RB3 = アナログ7 入力 (AN5)
+    //RB0 = アナログ4 入力 (AN2) → D16入力
+    //RB1 = アナログ5 入力 (AN3) → D17入力
+    //RB2 = アナログ6 入力 (AN4) → D18入力
+    //RB3 = アナログ7 入力 (AN5) → D19入力
     //RB4 = D04 入力
     //RB5 = D07 入力
     //RB6 = xx
@@ -372,7 +372,7 @@ void UserInit(void)
     //RB14 = アナログ1 入力 (AN10))
     //RB15 = EEPROM SCK 出力
     TRISC = 0x03F7;     // RC0-9
-    //RC0 = アナログ8 入力 (AN6)
+    //RC0 = アナログ8 入力 (AN6) → D20入力
     //RC1 = D01 入力
     //RC2 = D02 入力
     //RC3 = EEPROM SDO 出力
