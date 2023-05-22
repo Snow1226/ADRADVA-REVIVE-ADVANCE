@@ -36,7 +36,7 @@ pDst                0x4               build/default/production/_ext/659838314/us
 USBDeferINDataStagePackets
                     0x4               build/default/production/_ext/659838314/usb_device.o
 BDT                 0xa0              build/default/production/_ext/659838314/usb_device.o
-my_an_infos         0x100             build/default/production/_ext/1360937237/l_eeprom.o
+my_an_infos         0x40              build/default/production/_ext/1360937237/l_eeprom.o
 CtrlTrfData         0x8               build/default/production/_ext/659838314/usb_device.o
 USBDeferOUTDataStagePackets
                     0x4               build/default/production/_ext/659838314/usb_device.o
@@ -63,7 +63,7 @@ pBDTEntryEP0OutNext
 USBBusIsSuspended   0x4               build/default/production/_ext/659838314/usb_device.o
 USBStatusStageTimeoutCounter
                     0x1               build/default/production/_ext/659838314/usb_device.o
-my_sw_infos         0xf0              build/default/production/_ext/1360937237/l_eeprom.o
+my_sw_infos         0x150             build/default/production/_ext/1360937237/l_eeprom.o
 ToSendDataBuffer    0x40              build/default/production/_ext/1360937237/main.o
 SetupPkt            0x8               build/default/production/_ext/659838314/usb_device.o
 ep_data_in          0x5               build/default/production/_ext/659838314/usb_device.o
@@ -87,34 +87,34 @@ Microchip PIC32 Memory-Usage Report
 kseg0 Program-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-.text                   0x9d006490         0x597c       22908  App's exec code 
-.rodata                 0x9d00be0c          0x558        1368  Read-only const 
-.text                   0x9d00c364          0x744        1860  App's exec code 
-.rodata                 0x9d00caa8          0x3f0        1008  Read-only const 
-.text                   0x9d00ce98          0x460        1120  App's exec code 
-.text.general_exception 0x9d00d2f8           0xdc         220   
-.dinit                  0x9d00d3d4           0xb0         176   
-.text                   0x9d00d484           0xa8         168  App's exec code 
-.text.SoftReset         0x9d00d52c           0x78         120   
-.text.INTEnable         0x9d00d5a4           0x50          80   
-.text.main_entry        0x9d00d5f4           0x4c          76   
-.text                   0x9d00d640           0x44          68  App's exec code 
-.text.INTSetVectorPrior 0x9d00d684           0x38          56   
-.text.INTSetVectorSubPr 0x9d00d6bc           0x38          56   
-.text._bootstrap_except 0x9d00d6f4           0x38          56   
-.text._general_exceptio 0x9d00d72c           0x38          56   
-.text.INTGetVectorPrior 0x9d00d764           0x2c          44   
-.text.INTGetVectorSubPr 0x9d00d790           0x2c          44   
-.text.INTClearFlag      0x9d00d7bc           0x28          40   
-.text.INTSetFlag        0x9d00d7e4           0x28          40   
-.text.INTGetFlag        0x9d00d80c           0x28          40   
-.text.INTGetEnable      0x9d00d834           0x28          40   
-.text                   0x9d00d85c           0x18          24  App's exec code 
-.text.INTEnableInterrup 0x9d00d874            0x8           8   
-.text.INTDisableInterru 0x9d00d87c            0x8           8   
-.text._on_reset         0x9d00d884            0x8           8   
-.text._on_bootstrap     0x9d00d88c            0x8           8   
-      Total kseg0_program_mem used  :      0x7404       29700  74.6% of 0x9b70
+.text                   0x9d006490         0x5bfc       23548  App's exec code 
+.rodata                 0x9d00c08c          0x558        1368  Read-only const 
+.text                   0x9d00c5e4          0x744        1860  App's exec code 
+.rodata                 0x9d00cd28          0x3f0        1008  Read-only const 
+.text                   0x9d00d118          0x3b8         952  App's exec code 
+.text.general_exception 0x9d00d4d0           0xdc         220   
+.text                   0x9d00d5ac           0xa8         168  App's exec code 
+.dinit                  0x9d00d654           0xa0         160   
+.text.SoftReset         0x9d00d6f4           0x78         120   
+.text.INTEnable         0x9d00d76c           0x50          80   
+.text.main_entry        0x9d00d7bc           0x4c          76   
+.text                   0x9d00d808           0x44          68  App's exec code 
+.text.INTSetVectorPrior 0x9d00d84c           0x38          56   
+.text.INTSetVectorSubPr 0x9d00d884           0x38          56   
+.text._bootstrap_except 0x9d00d8bc           0x38          56   
+.text._general_exceptio 0x9d00d8f4           0x38          56   
+.text.INTGetVectorPrior 0x9d00d92c           0x2c          44   
+.text.INTGetVectorSubPr 0x9d00d958           0x2c          44   
+.text.INTClearFlag      0x9d00d984           0x28          40   
+.text.INTSetFlag        0x9d00d9ac           0x28          40   
+.text.INTGetFlag        0x9d00d9d4           0x28          40   
+.text.INTGetEnable      0x9d00d9fc           0x28          40   
+.text                   0x9d00da24           0x18          24  App's exec code 
+.text.INTEnableInterrup 0x9d00da3c            0x8           8   
+.text.INTDisableInterru 0x9d00da44            0x8           8   
+.text._on_reset         0x9d00da4c            0x8           8   
+.text._on_bootstrap     0x9d00da54            0x8           8   
+      Total kseg0_program_mem used  :      0x75cc       30156  75.8% of 0x9b70
 
 kseg0 Boot-Memory Usage
 section                    address  length [bytes]      (dec)  Description
@@ -136,30 +136,30 @@ section                    address  length [bytes]      (dec)  Description
 .bev_excpt              0x9d006380           0x10          16  BEV-Exception 
          Total kseg1_boot_mem used  :       0x1d4         468  40.1% of 0x490
         --------------------------------------------------------------------------
-         Total Program Memory used  :      0x75f8       30200  67.0% of 0xb000
+         Total Program Memory used  :      0x77c0       30656  68.0% of 0xb000
         --------------------------------------------------------------------------
 
 
 kseg1 Data-Memory Usage
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-.sdata                  0xa0000000           0x10          16  Small init data 
-.sbss                   0xa0000010          0x104         260  Small uninit data 
-.bss                    0xa0000114           0xa0         160  Uninitialized data 
-.data                   0xa00001b4            0xc          12  Initialized data 
-.bss                    0xa0000200          0x3b4         948  Uninitialized data 
-.bss                    0xa00005b4          0x1a0         416  Uninitialized data 
-         Total kseg1_data_mem used  :       0x714        1812  11.1% of 0x4000
+.sdata                  0xa0000000            0xc          12  Small init data 
+.sbss                   0xa000000c          0x108         264  Small uninit data 
+.bss                    0xa0000114           0x20          32  Uninitialized data 
+.data                   0xa0000134            0xc          12  Initialized data 
+.bss                    0xa0000200          0x354         852  Uninitialized data 
+.bss                    0xa0000554          0x124         292  Uninitialized data 
+         Total kseg1_data_mem used  :       0x5b8        1464  8.9% of 0x4000
         --------------------------------------------------------------------------
-            Total Data Memory used  :       0x714        1812  11.1% of 0x4000
+            Total Data Memory used  :       0x5b8        1464  8.9% of 0x4000
         --------------------------------------------------------------------------
 
 
 Dynamic Data-Memory Reservation
 section                    address  length [bytes]      (dec)  Description
 -------                 ----------  -------------------------  -----------
-heap                    0xa0000758           0x10          16  Reserved for heap 
-stack                   0xa0000780         0x3870       14448  Reserved for stack 
+heap                    0xa0000680           0x10          16  Reserved for heap 
+stack                   0xa00006a8         0x3950       14672  Reserved for stack 
 
         --------------------------------------------------------------------------
 
@@ -669,75 +669,78 @@ END GROUP
  *(.got)
                 0xa0000000                . = ALIGN (0x4)
 
-.sdata          0xa0000000       0x10
+.sdata          0xa0000000        0xc
                 0xa0000000                _sdata_begin = .
  *(.sdata .sdata.* .gnu.linkonce.s.*)
  .sdata         0xa0000000        0x8 build/default/production/_ext/1360937237/main.o
                 0xa0000000                c_version
- .sdata         0xa0000008        0x8 build/default/production/_ext/1360937237/l_adc.o
+ .sdata         0xa0000008        0x4 build/default/production/_ext/1360937237/l_adc.o
                 0xa0000008                ad_input_ch_no
-                0xa0000010                . = ALIGN (0x4)
-                0xa0000010                _sdata_end = .
+                0xa000000c                . = ALIGN (0x4)
+                0xa000000c                _sdata_end = .
 
 .lit8
  *(.lit8)
 
 .lit4
  *(.lit4)
-                0xa0000010                . = ALIGN (0x4)
-                0xa0000010                _data_end = .
-                0xa0000010                _bss_begin = .
+                0xa000000c                . = ALIGN (0x4)
+                0xa000000c                _data_end = .
+                0xa000000c                _bss_begin = .
 
-.sbss           0xa0000010      0x104
-                0xa0000010                _sbss_begin = .
+.sbss           0xa000000c      0x108
+                0xa000000c                _sbss_begin = .
  *(.dynsbss)
  *(.sbss .sbss.* .gnu.linkonce.sb.*)
- .sbss          0xa0000010        0xc build/default/production/_ext/1360937237/l_timer.o
-                0xa0000010                l_timer1_counter
-                0xa0000012                l_timer2_counter
-                0xa0000014                sw_input_counter
-                0xa0000015                sw_input_flag
-                0xa0000016                ad_input_counter
-                0xa0000017                ad_input_flag
-                0xa0000018                digital_input_counter
-                0xa0000019                digital_input_flag
-                0xa000001a                analog_input_counter
-                0xa000001b                analog_input_flag
- .sbss          0xa000001c       0x80 build/default/production/_ext/1360937237/main.o
-                0xa000001c                mouse_input
-                0xa0000024                keyboard_input
-                0xa000002c                keyboard_output
-                0xa0000030                mouse_buffer
-                0xa0000038                mouse_buffer_pre
-                0xa0000040                keyboard_buffer
-                0xa0000048                keyboard_buffer_pre
-                0xa0000050                joystick_out_time_counter
-                0xa0000052                mouse_input_out_flag
-                0xa0000053                joystick_input_out_flag
-                0xa0000054                keyboard_input_out_flag
-                0xa0000058                mouse_move_flag
-                0xa0000060                mouse_sensitivity
-                0xa0000066                set_keyboard_push_order_write_idx
-                0xa0000067                joystick_hat_sw_output
-                0xa0000068                joystick_lever_output
-                0xa000006c                an_joystick_lever_out_flag
-                0xa0000074                an_joystick_lever_out_value
-                0xa000007c                eeprom_read_req_flag
-                0xa000007d                eeprom_write_req_flag
-                0xa0000080                USBOutHandle
-                0xa0000084                USBInHandle
-                0xa0000088                lastTransmission_Mouse
-                0xa000008c                lastTransmission_Joystick
-                0xa0000090                lastINTransmission_Keyboard
-                0xa0000094                lastOUTTransmission_Keyboard
-                0xa0000098                USB_Sleep_Flag
- .sbss          0xa000009c       0x10 build/default/production/_ext/1360937237/l_adc.o
+ .sbss          0xa000000c        0xc build/default/production/_ext/1360937237/l_timer.o
+                0xa000000c                l_timer1_counter
+                0xa000000e                l_timer2_counter
+                0xa0000010                sw_input_counter
+                0xa0000011                sw_input_flag
+                0xa0000012                ad_input_counter
+                0xa0000013                ad_input_flag
+                0xa0000014                digital_input_counter
+                0xa0000015                digital_input_flag
+                0xa0000016                analog_input_counter
+                0xa0000017                analog_input_flag
+ .sbss          0xa0000018       0x80 build/default/production/_ext/1360937237/main.o
+                0xa0000018                mouse_input
+                0xa0000020                keyboard_input
+                0xa0000028                keyboard_output
+                0xa000002c                mouse_buffer
+                0xa0000034                mouse_buffer_pre
+                0xa000003c                keyboard_buffer
+                0xa0000044                keyboard_buffer_pre
+                0xa000004c                joystick_out_time_counter
+                0xa000004e                mouse_input_out_flag
+                0xa000004f                joystick_input_out_flag
+                0xa0000050                keyboard_input_out_flag
+                0xa0000054                mouse_move_flag
+                0xa000005c                mouse_sensitivity
+                0xa0000062                set_keyboard_push_order_write_idx
+                0xa0000063                joystick_hat_sw_output
+                0xa0000064                joystick_lever_output
+                0xa0000068                an_joystick_lever_out_flag
+                0xa000006c                an_joystick_lever_out_value
+                0xa0000070                an_mouse_count_val
+                0xa0000078                eeprom_read_req_flag
+                0xa0000079                eeprom_write_req_flag
+                0xa000007c                USBOutHandle
+                0xa0000080                USBInHandle
+                0xa0000084                lastTransmission_Mouse
+                0xa0000088                lastTransmission_Joystick
+                0xa000008c                lastINTransmission_Keyboard
+                0xa0000090                lastOUTTransmission_Keyboard
+                0xa0000094                USB_Sleep_Flag
+ .sbss          0xa0000098       0x14 build/default/production/_ext/1360937237/l_adc.o
+                0xa0000098                ad_input
                 0xa000009c                ad_input_comp
-                0xa00000a4                ad_convert_no
-                0xa00000a5                ad_input_average_buff_no
-                0xa00000a6                ad_input_req
-                0xa00000a8                ad_input_time_counter
-                0xa00000aa                ad_input_no
+                0xa000009e                ad_convert_no
+                0xa000009f                ad_input_average_buff_no
+                0xa00000a0                zero_offset
+                0xa00000a4                ad_input_req
+                0xa00000a6                ad_input_time_counter
+                0xa00000a8                ad_input_no
  *(.scommon)
  .scommon       0xa00000ac       0x64 build/default/production/_ext/659838314/usb_device.o
                 0xa00000ac                pDst
@@ -770,7 +773,7 @@ END GROUP
                 0xa0000114                . = ALIGN (0x4)
  *fill*         0xa0000112        0x2 
 
-.bss            0xa0000200      0x3b4
+.bss            0xa0000200      0x354
  *(.dynbss)
  *(COMMON)
  COMMON         0xa0000200       0xe3 build/default/production/_ext/659838314/usb_device.o
@@ -780,19 +783,19 @@ END GROUP
                 0xa00002c4                pBDTEntryOut
                 0xa00002d8                outPipes
  *fill*         0xa00002e3        0x1 
- COMMON         0xa00002e4      0x1f0 build/default/production/_ext/1360937237/l_eeprom.o
+ COMMON         0xa00002e4      0x190 build/default/production/_ext/1360937237/l_eeprom.o
                 0xa00002e4                my_an_infos
-                0xa00003e4                my_sw_infos
- COMMON         0xa00004d4       0xe0 build/default/production/_ext/1360937237/main.o
-                0xa00004d4                set_keyboard_push_order_ctrl_bit
-                0xa00004f4                ReceivedDataBuffer
-                0xa0000534                set_keyboard_push_order_key_code
-                0xa0000554                set_keyboard_push_order_buff
-                0xa0000574                ToSendDataBuffer
-                0xa00005b4                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0xa00005b4                . = ALIGN (0x4)
-                0xa00005b4                _end = .
-                0xa00005b4                _bss_end = .
+                0xa0000324                my_sw_infos
+ COMMON         0xa0000474       0xe0 build/default/production/_ext/1360937237/main.o
+                0xa0000474                set_keyboard_push_order_ctrl_bit
+                0xa0000494                ReceivedDataBuffer
+                0xa00004d4                set_keyboard_push_order_key_code
+                0xa00004f4                set_keyboard_push_order_buff
+                0xa0000514                ToSendDataBuffer
+                0xa0000554                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0xa0000554                . = ALIGN (0x4)
+                0xa0000554                _end = .
+                0xa0000554                _bss_end = .
                 0x00004000                _bmxdudba_address = 0x4000
                 0x00004000                _bmxdupba_address = 0x4000
 
@@ -814,27 +817,27 @@ END GROUP
  *(.gptab.bss)
  *(.gptab.sbss)
 
-.mdebug.abi32   0xa00005b4        0x0
+.mdebug.abi32   0xa0000554        0x0
  *(.mdebug.abi32)
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/659838314/usb_device.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/659838314/usb_function_hid.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/1360937237/l_eeprom.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/1360937237/l_spi.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/1360937237/l_timer.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/1360937237/main.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/1360937237/main_comm.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/1360937237/main_sub.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/1360937237/system_interrupt.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/1360937237/usb_descriptors.o
- .mdebug.abi32  0xa00005b4        0x0 build/default/production/_ext/1360937237/l_adc.o
- .mdebug.abi32  0xa00005b4        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
- .mdebug.abi32  0xa00005b4        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
- .mdebug.abi32  0xa00005b4        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
- .mdebug.abi32  0xa00005b4        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
- .mdebug.abi32  0xa00005b4        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .mdebug.abi32  0xa00005b4        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .mdebug.abi32  0xa00005b4        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .mdebug.abi32  0xa00005b4        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/659838314/usb_device.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/659838314/usb_function_hid.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/1360937237/l_eeprom.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/1360937237/l_spi.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/1360937237/l_timer.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/1360937237/main.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/1360937237/main_comm.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/1360937237/main_sub.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/1360937237/system_interrupt.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/1360937237/usb_descriptors.o
+ .mdebug.abi32  0xa0000554        0x0 build/default/production/_ext/1360937237/l_adc.o
+ .mdebug.abi32  0xa0000554        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
+ .mdebug.abi32  0xa0000554        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
+ .mdebug.abi32  0xa0000554        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
+ .mdebug.abi32  0xa0000554        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+ .mdebug.abi32  0xa0000554        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .mdebug.abi32  0xa0000554        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .mdebug.abi32  0xa0000554        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .mdebug.abi32  0xa0000554        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
 
 .mdebug.abiN32
  *(.mdebug.abiN32)
@@ -996,29 +999,29 @@ END GROUP
  .debug_pubnames
                 0x00001268       0x31 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
 
-.debug_info     0x00000000    0x14add
+.debug_info     0x00000000    0x14cd1
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x00000000     0x379f build/default/production/_ext/659838314/usb_device.o
- .debug_info    0x0000379f     0x1b21 build/default/production/_ext/659838314/usb_function_hid.o
- .debug_info    0x000052c0     0x1b4f build/default/production/_ext/1360937237/l_eeprom.o
- .debug_info    0x00006e0f     0x1b73 build/default/production/_ext/1360937237/l_spi.o
- .debug_info    0x00008982     0x213f build/default/production/_ext/1360937237/l_timer.o
- .debug_info    0x0000aac1     0x2613 build/default/production/_ext/1360937237/main.o
- .debug_info    0x0000d0d4     0x1a44 build/default/production/_ext/1360937237/main_comm.o
- .debug_info    0x0000eb18     0x1ded build/default/production/_ext/1360937237/main_sub.o
- .debug_info    0x00010905      0xf54 build/default/production/_ext/1360937237/system_interrupt.o
- .debug_info    0x00011859     0x16b9 build/default/production/_ext/1360937237/usb_descriptors.o
- .debug_info    0x00012f12     0x14e9 build/default/production/_ext/1360937237/l_adc.o
- .debug_info    0x000143fb       0xb2 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
- .debug_info    0x000144ad       0xb4 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
- .debug_info    0x00014561       0xb6 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
- .debug_info    0x00014617      0x196 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
- .debug_info    0x000147ad       0xde c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_info    0x0001488b       0xb8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_info    0x00014943       0xc0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_info    0x00014a03       0xda c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
+ .debug_info    0x00000000     0x37cf build/default/production/_ext/659838314/usb_device.o
+ .debug_info    0x000037cf     0x1b51 build/default/production/_ext/659838314/usb_function_hid.o
+ .debug_info    0x00005320     0x1b80 build/default/production/_ext/1360937237/l_eeprom.o
+ .debug_info    0x00006ea0     0x1ba3 build/default/production/_ext/1360937237/l_spi.o
+ .debug_info    0x00008a43     0x216f build/default/production/_ext/1360937237/l_timer.o
+ .debug_info    0x0000abb2     0x2634 build/default/production/_ext/1360937237/main.o
+ .debug_info    0x0000d1e6     0x1a65 build/default/production/_ext/1360937237/main_comm.o
+ .debug_info    0x0000ec4b     0x1e1e build/default/production/_ext/1360937237/main_sub.o
+ .debug_info    0x00010a69      0xf84 build/default/production/_ext/1360937237/system_interrupt.o
+ .debug_info    0x000119ed     0x16e9 build/default/production/_ext/1360937237/usb_descriptors.o
+ .debug_info    0x000130d6     0x1519 build/default/production/_ext/1360937237/l_adc.o
+ .debug_info    0x000145ef       0xb2 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
+ .debug_info    0x000146a1       0xb4 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
+ .debug_info    0x00014755       0xb6 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
+ .debug_info    0x0001480b      0x196 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+ .debug_info    0x000149a1       0xde c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_info    0x00014a7f       0xb8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_info    0x00014b37       0xc0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_info    0x00014bf7       0xda c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
 
-.debug_abbrev   0x00000000     0x1a0a
+.debug_abbrev   0x00000000     0x1a13
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x35a build/default/production/_ext/659838314/usb_device.o
  .debug_abbrev  0x0000035a      0x1e3 build/default/production/_ext/659838314/usb_function_hid.o
@@ -1026,41 +1029,41 @@ END GROUP
  .debug_abbrev  0x0000084c      0x1bf build/default/production/_ext/1360937237/l_spi.o
  .debug_abbrev  0x00000a0b      0x20a build/default/production/_ext/1360937237/l_timer.o
  .debug_abbrev  0x00000c15      0x29f build/default/production/_ext/1360937237/main.o
- .debug_abbrev  0x00000eb4      0x20a build/default/production/_ext/1360937237/main_comm.o
- .debug_abbrev  0x000010be      0x2ce build/default/production/_ext/1360937237/main_sub.o
- .debug_abbrev  0x0000138c      0x17b build/default/production/_ext/1360937237/system_interrupt.o
- .debug_abbrev  0x00001507      0x1e5 build/default/production/_ext/1360937237/usb_descriptors.o
- .debug_abbrev  0x000016ec      0x1ef build/default/production/_ext/1360937237/l_adc.o
- .debug_abbrev  0x000018db       0x34 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
- .debug_abbrev  0x0000190f       0x25 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
- .debug_abbrev  0x00001934       0x25 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
- .debug_abbrev  0x00001959       0x25 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
- .debug_abbrev  0x0000197e       0x23 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_abbrev  0x000019a1       0x23 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_abbrev  0x000019c4       0x23 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_abbrev  0x000019e7       0x23 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
+ .debug_abbrev  0x00000eb4      0x213 build/default/production/_ext/1360937237/main_comm.o
+ .debug_abbrev  0x000010c7      0x2ce build/default/production/_ext/1360937237/main_sub.o
+ .debug_abbrev  0x00001395      0x17b build/default/production/_ext/1360937237/system_interrupt.o
+ .debug_abbrev  0x00001510      0x1e5 build/default/production/_ext/1360937237/usb_descriptors.o
+ .debug_abbrev  0x000016f5      0x1ef build/default/production/_ext/1360937237/l_adc.o
+ .debug_abbrev  0x000018e4       0x34 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
+ .debug_abbrev  0x00001918       0x25 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
+ .debug_abbrev  0x0000193d       0x25 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
+ .debug_abbrev  0x00001962       0x25 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+ .debug_abbrev  0x00001987       0x23 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_abbrev  0x000019aa       0x23 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_abbrev  0x000019cd       0x23 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_abbrev  0x000019f0       0x23 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
 
-.debug_line     0x00000000     0x2458
+.debug_line     0x00000000     0x29c3
  *(.debug_line)
- .debug_line    0x00000000      0x5b8 build/default/production/_ext/659838314/usb_device.o
- .debug_line    0x000005b8      0x21f build/default/production/_ext/659838314/usb_function_hid.o
- .debug_line    0x000007d7      0x268 build/default/production/_ext/1360937237/l_eeprom.o
- .debug_line    0x00000a3f      0x1a0 build/default/production/_ext/1360937237/l_spi.o
- .debug_line    0x00000bdf      0x213 build/default/production/_ext/1360937237/l_timer.o
- .debug_line    0x00000df2      0x414 build/default/production/_ext/1360937237/main.o
- .debug_line    0x00001206      0x479 build/default/production/_ext/1360937237/main_comm.o
- .debug_line    0x0000167f      0x44d build/default/production/_ext/1360937237/main_sub.o
- .debug_line    0x00001acc      0x188 build/default/production/_ext/1360937237/system_interrupt.o
- .debug_line    0x00001c54      0x1db build/default/production/_ext/1360937237/usb_descriptors.o
- .debug_line    0x00001e2f      0x1ed build/default/production/_ext/1360937237/l_adc.o
- .debug_line    0x0000201c       0xbb c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
- .debug_line    0x000020d7       0x72 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
- .debug_line    0x00002149       0x73 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
- .debug_line    0x000021bc       0x64 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
- .debug_line    0x00002220       0x97 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
- .debug_line    0x000022b7       0x84 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
- .debug_line    0x0000233b       0x88 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
- .debug_line    0x000023c3       0x95 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
+ .debug_line    0x00000000      0x618 build/default/production/_ext/659838314/usb_device.o
+ .debug_line    0x00000618      0x27f build/default/production/_ext/659838314/usb_function_hid.o
+ .debug_line    0x00000897      0x2f8 build/default/production/_ext/1360937237/l_eeprom.o
+ .debug_line    0x00000b8f      0x200 build/default/production/_ext/1360937237/l_spi.o
+ .debug_line    0x00000d8f      0x2a3 build/default/production/_ext/1360937237/l_timer.o
+ .debug_line    0x00001032      0x49e build/default/production/_ext/1360937237/main.o
+ .debug_line    0x000014d0      0x4fe build/default/production/_ext/1360937237/main_comm.o
+ .debug_line    0x000019ce      0x4f5 build/default/production/_ext/1360937237/main_sub.o
+ .debug_line    0x00001ec3      0x1e8 build/default/production/_ext/1360937237/system_interrupt.o
+ .debug_line    0x000020ab      0x26b build/default/production/_ext/1360937237/usb_descriptors.o
+ .debug_line    0x00002316      0x271 build/default/production/_ext/1360937237/l_adc.o
+ .debug_line    0x00002587       0xbb c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
+ .debug_line    0x00002642       0x72 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
+ .debug_line    0x000026b4       0x73 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
+ .debug_line    0x00002727       0x64 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+ .debug_line    0x0000278b       0x97 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+ .debug_line    0x00002822       0x84 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+ .debug_line    0x000028a6       0x88 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+ .debug_line    0x0000292e       0x95 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
 
 .debug_frame    0x00000000      0x8dc
  *(.debug_frame)
@@ -1105,15 +1108,15 @@ END GROUP
  .debug_str     0x00001620        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
  .debug_str     0x00001620        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
 
-.debug_loc      0x00000000      0xb06
+.debug_loc      0x00000000      0xb39
  *(.debug_loc)
  .debug_loc     0x00000000      0x1f0 build/default/production/_ext/659838314/usb_device.o
  .debug_loc     0x000001f0      0x2da build/default/production/_ext/1360937237/l_eeprom.o
  .debug_loc     0x000004ca       0x4f build/default/production/_ext/1360937237/l_spi.o
  .debug_loc     0x00000519       0xa1 build/default/production/_ext/1360937237/main.o
  .debug_loc     0x000005ba       0xb1 build/default/production/_ext/1360937237/main_comm.o
- .debug_loc     0x0000066b      0x475 build/default/production/_ext/1360937237/main_sub.o
- .debug_loc     0x00000ae0       0x26 build/default/production/_ext/1360937237/l_adc.o
+ .debug_loc     0x0000066b      0x492 build/default/production/_ext/1360937237/main_sub.o
+ .debug_loc     0x00000afd       0x3c build/default/production/_ext/1360937237/l_adc.o
 
 .debug_macinfo
  *(.debug_macinfo)
@@ -1225,38 +1228,35 @@ LOAD data_init
 .reginfo        0x00000000       0x18
  .reginfo       0x00000000       0x18 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX230F064D/crt0_mips32r2.o
 
-.stack          0xa0000780      0x400
- .stack         0xa0000780      0x400 stack
+.stack          0xa00006a8      0x400
+ .stack         0xa00006a8      0x400 stack
 
-.bss            0xa00005b4      0x1a0
- .bss           0xa00005b4      0x1a0 build/default/production/_ext/1360937237/main.o
-                0xa00005b4                joystick_input
-                0xa00005c0                joystick_buffer
-                0xa00005cc                joystick_buffer_pre
-                0xa00005d8                joystick_lever_move_value
-                0xa00005e4                sw_now_fix
-                0xa00005f4                sw_now_fix_pre
-                0xa0000604                sw_press_on_cnt
-                0xa0000614                sw_press_off_cnt
-                0xa0000624                mouse_count_val
-                0xa000063c                an_out_setup_ad_val
-                0xa000068c                an_out_setup_out_val
-                0xa00006b4                an_out_setup_center_val
-                0xa00006e4                an_mouse_count_val
-                0xa0000704                debug_arr1
-                0xa0000714                debug_arr2
-                0xa0000724                debug_arr3
-                0xa0000734                debug_array_w1
+.bss            0xa0000554      0x124
+ .bss           0xa0000554      0x124 build/default/production/_ext/1360937237/main.o
+                0xa0000554                joystick_input
+                0xa0000560                joystick_buffer
+                0xa000056c                joystick_buffer_pre
+                0xa0000578                joystick_lever_move_value
+                0xa0000584                sw_now_fix
+                0xa000059c                sw_now_fix_pre
+                0xa00005b4                sw_press_on_cnt
+                0xa00005cc                sw_press_off_cnt
+                0xa00005e4                mouse_count_val
+                0xa00005fc                an_out_setup_ad_val
+                0xa0000610                an_out_setup_out_val
+                0xa000061c                an_out_setup_center_val
+                0xa0000628                debug_arr1
+                0xa0000638                debug_arr2
+                0xa0000648                debug_arr3
+                0xa0000658                debug_array_w1
 
-.bss            0xa0000114       0xa0
- .bss           0xa0000114       0xa0 build/default/production/_ext/1360937237/l_adc.o
-                0xa0000114                ad_input
-                0xa0000124                ad_input_average_buff
-                0xa00001a4                zero_offset
+.bss            0xa0000114       0x20
+ .bss           0xa0000114       0x20 build/default/production/_ext/1360937237/l_adc.o
+                0xa0000114                ad_input_average_buff
 
-.data           0xa00001b4        0xc
- .data          0xa00001b4        0xc build/default/production/_ext/1360937237/main.o
-                0xa00001b4                joystick_default_value
+.data           0xa0000134        0xc
+ .data          0xa0000134        0xc build/default/production/_ext/1360937237/main.o
+                0xa0000134                joystick_default_value
 
 .bss%z1         0x00000000        0x0
  .bss           0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\debug-exception-return.o
@@ -1411,7 +1411,7 @@ LOAD data_init
 .data%z51       0x00000000        0x0
  .data          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX230F064D/crt0_mips32r2.o
 
-.text           0x9d006490     0x597c
+.text           0x9d006490     0x5bfc
  .text          0x9d006490     0x1f54 build/default/production/_ext/659838314/usb_device.o
                 0x9d006614                USBDeviceInit
                 0x9d006830                USBEnableEndpoint
@@ -1421,231 +1421,231 @@ LOAD data_init
                 0x9d006cac                USBCtrlEPAllowStatusStage
                 0x9d006df8                USBCtrlEPAllowDataStage
                 0x9d006f1c                USBDeviceTasks
- .text          0x9d0083e4     0x154c build/default/production/_ext/1360937237/main_comm.o
-                0x9d0083e4                USB_Comm
- .text          0x9d009930     0x12fc build/default/production/_ext/1360937237/main_sub.o
-                0x9d009930                Soft_Delay
-                0x9d00996c                Switch_Input
-                0x9d009b4c                SW_Keyboard_Data_Set
-                0x9d009be8                SW_Output_Keyboard
-                0x9d009d28                keyboard_push_order_buff_optimization
-                0x9d009e20                Check_SWInfo
-                0x9d009f74                Check_ANInfo
-                0x9d00a15c                get_joystick_hat_sw_usb_output
-                0x9d00a1e8                set_joystick_lever_usb_output
-                0x9d00a374                set_analog_output_setup_val
-                0x9d00a578                set_analog_usb_joystick_output
-                0x9d00a63c                set_analog_usb_mouse_output
-                0x9d00a818                get_analog_joystick_output_val
-                0x9d00ab3c                get_analog_mouse_output_val
- .text          0x9d00ac2c      0xb68 build/default/production/_ext/1360937237/main.o
-                0x9d00ac2c                UserInit
-                0x9d00af58                ProcessIO
-                0x9d00b5bc                main
-                0x9d00b5ec                USBCBSuspend
-                0x9d00b5f8                USBCBWakeFromSuspend
-                0x9d00b600                USBCB_SOF_Handler
-                0x9d00b608                USBCBErrorHandler
-                0x9d00b610                USBCBCheckOtherReq
-                0x9d00b62c                USBCBStdSetDscHandler
-                0x9d00b634                USBCBInitEP
-                0x9d00b6ac                USBCBSendResume
-                0x9d00b72c                USER_USB_CALLBACK_EVENT_HANDLER
- .text          0x9d00b794      0x678 build/default/production/_ext/1360937237/l_eeprom.o
-                0x9d00b794                eeprom_send_adr
-                0x9d00b7c4                eeprom_wrsr
-                0x9d00b81c                eeprom_write_byte
-                0x9d00b888                eeprom_write_word
-                0x9d00b8d0                eeprom_rdsr
-                0x9d00b928                eeprom_busy
-                0x9d00b98c                eeprom_wait_wip
-                0x9d00b9dc                eeprom_read_byte
-                0x9d00ba50                eeprom_read_word
-                0x9d00ba9c                eeprom_read_adr
-                0x9d00baec                eeprom_wren
-                0x9d00bb30                eeprom_wrdi
-                0x9d00bb74                eeprom_continuous_start
-                0x9d00bb8c                eeprom_continuous_end
-                0x9d00bba8                eeprom_continuous_write
-                0x9d00bbd8                eeprom_continuous_read
-                0x9d00bc08                eeprom_continuous_access_w
-                0x9d00bc24                eeprom_continuous_access_r
-                0x9d00bc40                eeprom_unprotected
-                0x9d00bc6c                eeprom_protect
-                0x9d00bc98                eeprom_n_write
-                0x9d00bd10                eeprom_n_read
-                0x9d00bd7c                u_SWInfo_buffClr
-                0x9d00bd9c                u_ANInfo_buffClr
-                0x9d00bdbc                u_GetSWInfo
-                0x9d00bde4                u_GetANInfo
+ .text          0x9d0083e4     0x15b0 build/default/production/_ext/1360937237/main_sub.o
+                0x9d0083e4                Soft_Delay
+                0x9d008420                Switch_Input
+                0x9d008648                SW_Keyboard_Data_Set
+                0x9d0086e4                SW_Output_Keyboard
+                0x9d008824                keyboard_push_order_buff_optimization
+                0x9d00891c                Check_SWInfo
+                0x9d008a70                Check_ANInfo
+                0x9d008c58                get_joystick_hat_sw_usb_output
+                0x9d008ce4                set_joystick_lever_usb_output
+                0x9d008e70                set_analog_output_setup_val
+                0x9d0092e4                set_analog_usb_joystick_output
+                0x9d0093a8                set_analog_usb_mouse_output
+                0x9d009580                get_analog_joystick_output_val
+                0x9d0098a4                get_analog_mouse_output_val
+ .text          0x9d009994     0x1538 build/default/production/_ext/1360937237/main_comm.o
+                0x9d009994                USB_Comm
+ .text          0x9d00aecc      0xb48 build/default/production/_ext/1360937237/main.o
+                0x9d00aecc                UserInit
+                0x9d00b1f0                ProcessIO
+                0x9d00b83c                main
+                0x9d00b86c                USBCBSuspend
+                0x9d00b878                USBCBWakeFromSuspend
+                0x9d00b880                USBCB_SOF_Handler
+                0x9d00b888                USBCBErrorHandler
+                0x9d00b890                USBCBCheckOtherReq
+                0x9d00b8ac                USBCBStdSetDscHandler
+                0x9d00b8b4                USBCBInitEP
+                0x9d00b92c                USBCBSendResume
+                0x9d00b9ac                USER_USB_CALLBACK_EVENT_HANDLER
+ .text          0x9d00ba14      0x678 build/default/production/_ext/1360937237/l_eeprom.o
+                0x9d00ba14                eeprom_send_adr
+                0x9d00ba44                eeprom_wrsr
+                0x9d00ba9c                eeprom_write_byte
+                0x9d00bb08                eeprom_write_word
+                0x9d00bb50                eeprom_rdsr
+                0x9d00bba8                eeprom_busy
+                0x9d00bc0c                eeprom_wait_wip
+                0x9d00bc5c                eeprom_read_byte
+                0x9d00bcd0                eeprom_read_word
+                0x9d00bd1c                eeprom_read_adr
+                0x9d00bd6c                eeprom_wren
+                0x9d00bdb0                eeprom_wrdi
+                0x9d00bdf4                eeprom_continuous_start
+                0x9d00be0c                eeprom_continuous_end
+                0x9d00be28                eeprom_continuous_write
+                0x9d00be58                eeprom_continuous_read
+                0x9d00be88                eeprom_continuous_access_w
+                0x9d00bea4                eeprom_continuous_access_r
+                0x9d00bec0                eeprom_unprotected
+                0x9d00beec                eeprom_protect
+                0x9d00bf18                eeprom_n_write
+                0x9d00bf90                eeprom_n_read
+                0x9d00bffc                u_SWInfo_buffClr
+                0x9d00c01c                u_ANInfo_buffClr
+                0x9d00c03c                u_GetSWInfo
+                0x9d00c064                u_GetANInfo
 
-.rodata         0x9d00be0c      0x558
- .rodata        0x9d00be0c      0x558 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00be0c                __IntSrcTbl
-                0x9d00c154                __IntVectorTbl
+.rodata         0x9d00c08c      0x558
+ .rodata        0x9d00c08c      0x558 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00c08c                __IntSrcTbl
+                0x9d00c3d4                __IntVectorTbl
 
-.text           0x9d00c364      0x744
- .text          0x9d00c364      0x2a0 build/default/production/_ext/659838314/usb_function_hid.o
-                0x9d00c364                USBCheckHIDRequest
- .text          0x9d00c604      0x284 build/default/production/_ext/1360937237/l_timer.o
-                0x9d00c604                timer1_init
-                0x9d00c698                timer2_init
-                0x9d00c72c                timer4_init
-                0x9d00c79c                Timer1_Task
-                0x9d00c834                Timer2_Task
- .text          0x9d00c888      0x220 build/default/production/_ext/1360937237/system_interrupt.o
-                0x9d00c888                _InterruptHandler_Timer1
-                0x9d00c998                _InterruptHandler_Timer2
+.text           0x9d00c5e4      0x744
+ .text          0x9d00c5e4      0x2a0 build/default/production/_ext/659838314/usb_function_hid.o
+                0x9d00c5e4                USBCheckHIDRequest
+ .text          0x9d00c884      0x284 build/default/production/_ext/1360937237/l_timer.o
+                0x9d00c884                timer1_init
+                0x9d00c918                timer2_init
+                0x9d00c9ac                timer4_init
+                0x9d00ca1c                Timer1_Task
+                0x9d00cab4                Timer2_Task
+ .text          0x9d00cb08      0x220 build/default/production/_ext/1360937237/system_interrupt.o
+                0x9d00cb08                _InterruptHandler_Timer1
+                0x9d00cc18                _InterruptHandler_Timer2
 
-.rodata         0x9d00caa8      0x3f0
- .rodata        0x9d00caa8      0x200 build/default/production/_ext/1360937237/l_eeprom.o
-                0x9d00caa8                c_eeprom_default_data
- .rodata        0x9d00cca8      0x1f0 build/default/production/_ext/1360937237/usb_descriptors.o
-                0x9d00cca8                device_dsc
-                0x9d00ccbc                configDescriptor1
-                0x9d00cd40                sd000
-                0x9d00cd44                sd001
-                0x9d00cd70                sd002
-                0x9d00cd90                hid_rpt01
-                0x9d00cdd0                hid_rpt02
-                0x9d00ce14                hid_rpt03
-                0x9d00ce68                hid_rpt04
-                0x9d00ce88                USB_CD_Ptr
-                0x9d00ce8c                USB_SD_Ptr
+.rodata         0x9d00cd28      0x3f0
+ .rodata        0x9d00cd28      0x200 build/default/production/_ext/1360937237/l_eeprom.o
+                0x9d00cd28                c_eeprom_default_data
+ .rodata        0x9d00cf28      0x1f0 build/default/production/_ext/1360937237/usb_descriptors.o
+                0x9d00cf28                device_dsc
+                0x9d00cf3c                configDescriptor1
+                0x9d00cfc0                sd000
+                0x9d00cfc4                sd001
+                0x9d00cff0                sd002
+                0x9d00d010                hid_rpt01
+                0x9d00d050                hid_rpt02
+                0x9d00d094                hid_rpt03
+                0x9d00d0e8                hid_rpt04
+                0x9d00d108                USB_CD_Ptr
+                0x9d00d10c                USB_SD_Ptr
 
-.text           0x9d00ce98      0x460
- .text          0x9d00ce98      0x194 build/default/production/_ext/1360937237/l_adc.o
-                0x9d00ce98                l_adc_init
-                0x9d00cecc                l_adc_input
- .text          0x9d00d02c      0x168 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(strlen.o)
-                0x9d00d02c                strlen
- .text          0x9d00d194      0x164 build/default/production/_ext/1360937237/l_spi.o
-                0x9d00d194                l_spi1_init
-                0x9d00d20c                l_WriteSPI1
-                0x9d00d28c                l_ReadSPI1
+.text           0x9d00d118      0x3b8
+ .text          0x9d00d118      0x168 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(strlen.o)
+                0x9d00d118                strlen
+ .text          0x9d00d280      0x164 build/default/production/_ext/1360937237/l_spi.o
+                0x9d00d280                l_spi1_init
+                0x9d00d2f8                l_WriteSPI1
+                0x9d00d378                l_ReadSPI1
+ .text          0x9d00d3e4       0xec build/default/production/_ext/1360937237/l_adc.o
+                0x9d00d3e4                l_adc_init
+                0x9d00d418                l_adc_input
 
 .text.general_exception
-                0x9d00d2f8       0xdc
+                0x9d00d4d0       0xdc
  .text.general_exception
-                0x9d00d2f8       0xdc c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(general-exception.o)
-                0x9d00d2f8                _general_exception_context
+                0x9d00d4d0       0xdc c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(general-exception.o)
+                0x9d00d4d0                _general_exception_context
 
-.dinit          0x9d00d3d4       0xb0
- .dinit         0x9d00d3d4       0xb0 data_init
+.text           0x9d00d5ac       0xa8
+ .text          0x9d00d5ac       0xa8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(memset.o)
+                0x9d00d5ac                memset
 
-.text           0x9d00d484       0xa8
- .text          0x9d00d484       0xa8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(memset.o)
-                0x9d00d484                memset
+.dinit          0x9d00d654       0xa0
+ .dinit         0x9d00d654       0xa0 data_init
 
 .text.SoftReset
-                0x9d00d52c       0x78
+                0x9d00d6f4       0x78
  .text.SoftReset
-                0x9d00d52c       0x78 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
-                0x9d00d52c                SoftReset
+                0x9d00d6f4       0x78 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(soft_reset_lib.o)
+                0x9d00d6f4                SoftReset
 
 .text.INTEnable
-                0x9d00d5a4       0x50
+                0x9d00d76c       0x50
  .text.INTEnable
-                0x9d00d5a4       0x50 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00d5a4                INTEnable
+                0x9d00d76c       0x50 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00d76c                INTEnable
 
 .text.main_entry
-                0x9d00d5f4       0x4c
+                0x9d00d7bc       0x4c
  .text.main_entry
-                0x9d00d5f4       0x4c c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX230F064D/crt0_mips32r2.o
-                0x9d00d620                __crt0_exit
+                0x9d00d7bc       0x4c c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib/./proc/32MX230F064D/crt0_mips32r2.o
+                0x9d00d7e8                __crt0_exit
 
-.text           0x9d00d640       0x44
- .text          0x9d00d640       0x44 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(pic32_software_reset.o)
-                0x9d00d640                __pic32_software_reset
+.text           0x9d00d808       0x44
+ .text          0x9d00d808       0x44 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(pic32_software_reset.o)
+                0x9d00d808                __pic32_software_reset
 
 .text.INTSetVectorPriority
-                0x9d00d684       0x38
+                0x9d00d84c       0x38
  .text.INTSetVectorPriority
-                0x9d00d684       0x38 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00d684                INTSetVectorPriority
+                0x9d00d84c       0x38 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00d84c                INTSetVectorPriority
 
 .text.INTSetVectorSubPriority
-                0x9d00d6bc       0x38
+                0x9d00d884       0x38
  .text.INTSetVectorSubPriority
-                0x9d00d6bc       0x38 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00d6bc                INTSetVectorSubPriority
+                0x9d00d884       0x38 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00d884                INTSetVectorSubPriority
 
 .text._bootstrap_exception_handler
-                0x9d00d6f4       0x38
+                0x9d00d8bc       0x38
  .text._bootstrap_exception_handler
-                0x9d00d6f4       0x38 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
-                0x9d00d6f4                _bootstrap_exception_handler
+                0x9d00d8bc       0x38 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-bootstrap-exception-handler.o)
+                0x9d00d8bc                _bootstrap_exception_handler
 
 .text._general_exception_handler
-                0x9d00d72c       0x38
+                0x9d00d8f4       0x38
  .text._general_exception_handler
-                0x9d00d72c       0x38 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
-                0x9d00d72c                _general_exception_handler
+                0x9d00d8f4       0x38 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-general-exception-handler.o)
+                0x9d00d8f4                _general_exception_handler
 
 .text.INTGetVectorPriority
-                0x9d00d764       0x2c
+                0x9d00d92c       0x2c
  .text.INTGetVectorPriority
-                0x9d00d764       0x2c c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00d764                INTGetVectorPriority
+                0x9d00d92c       0x2c c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00d92c                INTGetVectorPriority
 
 .text.INTGetVectorSubPriority
-                0x9d00d790       0x2c
+                0x9d00d958       0x2c
  .text.INTGetVectorSubPriority
-                0x9d00d790       0x2c c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00d790                INTGetVectorSubPriority
+                0x9d00d958       0x2c c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00d958                INTGetVectorSubPriority
 
 .text.INTClearFlag
-                0x9d00d7bc       0x28
+                0x9d00d984       0x28
  .text.INTClearFlag
-                0x9d00d7bc       0x28 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00d7bc                INTClearFlag
+                0x9d00d984       0x28 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00d984                INTClearFlag
 
 .text.INTSetFlag
-                0x9d00d7e4       0x28
+                0x9d00d9ac       0x28
  .text.INTSetFlag
-                0x9d00d7e4       0x28 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00d7e4                INTSetFlag
+                0x9d00d9ac       0x28 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00d9ac                INTSetFlag
 
 .text.INTGetFlag
-                0x9d00d80c       0x28
+                0x9d00d9d4       0x28
  .text.INTGetFlag
-                0x9d00d80c       0x28 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00d80c                INTGetFlag
+                0x9d00d9d4       0x28 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00d9d4                INTGetFlag
 
 .text.INTGetEnable
-                0x9d00d834       0x28
+                0x9d00d9fc       0x28
  .text.INTGetEnable
-                0x9d00d834       0x28 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
-                0x9d00d834                INTGetEnable
+                0x9d00d9fc       0x28 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_tbl_lib.o)
+                0x9d00d9fc                INTGetEnable
 
-.text           0x9d00d85c       0x18
- .text          0x9d00d85c       0x18 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-nmi-handler.o)
-                0x9d00d85c                _nmi_handler
+.text           0x9d00da24       0x18
+ .text          0x9d00da24       0x18 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-nmi-handler.o)
+                0x9d00da24                _nmi_handler
 
 .text.INTEnableInterrupts
-                0x9d00d874        0x8
+                0x9d00da3c        0x8
  .text.INTEnableInterrupts
-                0x9d00d874        0x8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
-                0x9d00d874                INTEnableInterrupts
+                0x9d00da3c        0x8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_enable_interrupts_lib.o)
+                0x9d00da3c                INTEnableInterrupts
 
 .text.INTDisableInterrupts
-                0x9d00d87c        0x8
+                0x9d00da44        0x8
  .text.INTDisableInterrupts
-                0x9d00d87c        0x8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
-                0x9d00d87c                INTDisableInterrupts
+                0x9d00da44        0x8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libmchp_peripheral_32MX230F064D.a(int_disable_interrupts_lib.o)
+                0x9d00da44                INTDisableInterrupts
 
 .text._on_reset
-                0x9d00d884        0x8
+                0x9d00da4c        0x8
  .text._on_reset
-                0x9d00d884        0x8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
-                0x9d00d884                _on_reset
+                0x9d00da4c        0x8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-reset.o)
+                0x9d00da4c                _on_reset
 
 .text._on_bootstrap
-                0x9d00d88c        0x8
+                0x9d00da54        0x8
  .text._on_bootstrap
-                0x9d00d88c        0x8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
-                0x9d00d88c                _on_bootstrap
+                0x9d00da54        0x8 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\libpic32.a(default-on-bootstrap.o)
+                0x9d00da54                _on_bootstrap
 
 .text%z52       0x00000000        0x0
  .text          0x00000000        0x0 c:/program files (x86)/microchip/xc32/v1.30/bin/../lib/gcc/pic32mx/4.5.2/../../../../pic32mx/lib\debug-exception-return.o
