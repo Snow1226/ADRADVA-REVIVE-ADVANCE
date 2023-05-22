@@ -30,3 +30,14 @@ C:\Users\Shinozaki\work\ReviveAdvance\PCver120_20210118\bin\x86\Release\Revive_U
 C:\Users\Shinozaki\work\ReviveAdvance\PCver120_20210118\obj\x86\Release\ReviveUSBAdvance.Form1.resources
 C:\Users\Shinozaki\work\ReviveAdvance\PCver120_20210118\obj\x86\Release\Revive_USB_Advance_CT.Properties.Resources.resources
 C:\Users\Shinozaki\work\ReviveAdvance\PCver120_20210118\obj\x86\Release\ReviveAdvance.csproj.GenerateResource.Cache
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\bin\x86\Release\Revive_USB_Advance_CT.exe.config
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\bin\x86\Release\Revive_USB_Advance_CT.exe
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\bin\x86\Release\Revive_USB_Advance_CT.pdb
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\obj\x86\Release\ReviveAdvance.csproj.AssemblyReference.cache
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\obj\x86\Release\ReviveAdvance.csproj.SuggestedBindingRedirects.cache
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\obj\x86\Release\ReviveUSBAdvance.Form1.resources
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\obj\x86\Release\Revive_USB_Advance_CT.Properties.Resources.resources
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\obj\x86\Release\ReviveAdvance.csproj.GenerateResource.cache
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\obj\x86\Release\ReviveAdvance.csproj.CoreCompileInputs.cache
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\obj\x86\Release\Revive_USB_Advance_CT.exe
+D:\DataFile\DevelopCode\repos\Snow1226\ADRADVA-REVIVE-ADVANCE\PCTool\PCver120_20210118R\obj\x86\Release\Revive_USB_Advance_CT.pdb
