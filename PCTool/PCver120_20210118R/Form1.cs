@@ -479,7 +479,7 @@ namespace ReviveUSBAdvance
                                           0,0,0,0,0,0,0,0,0,0,
                                           0,0,0,0,0,0,0,0,0,0,
                                           0,0,0,0};
-        bool[] ChangeAssign = new bool[Constants.DIGITAL_INPUT_NUM] { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true };
+        bool[] ChangeAssign = new bool[Constants.DIGITAL_INPUT_NUM] { true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true, true };
         //bool Changevalue_btn_pressed = false;
 
         byte SW_DeviceType_selected = 0;
@@ -1131,16 +1131,31 @@ namespace ReviveUSBAdvance
                 my_an_datas.init_data(Constants.ANALOG_INPUT_NUM, EepromControl.E2P_AN_INFO_AN_DATA_SIZE);
                 my_eeprom_read_write_buffer.init_data(EepromControl.E2P_TOTAL_SIZE);
 
-                my_lbl_sw_assign = new Label[] { DeviceAssign_lbl1, DeviceAssign_lbl2, DeviceAssign_lbl3, DeviceAssign_lbl4, DeviceAssign_lbl5, DeviceAssign_lbl6, DeviceAssign_lbl7, DeviceAssign_lbl8, DeviceAssign_lbl9, DeviceAssign_lbl10, DeviceAssign_lbl11, DeviceAssign_lbl12, DeviceAssign_lbl13, DeviceAssign_lbl14, DeviceAssign_lbl15 };
-                my_lbl_sw_device_type = new Label[] { devicetype_lbl1, devicetype_lbl2, devicetype_lbl3, devicetype_lbl4, devicetype_lbl5, devicetype_lbl6, devicetype_lbl7, devicetype_lbl8, devicetype_lbl9, devicetype_lbl10, devicetype_lbl11, devicetype_lbl12, devicetype_lbl13, devicetype_lbl14, devicetype_lbl15 };
-                my_pic_sw_status = new PictureBox[] { ButtonPressIcon1, ButtonPressIcon2, ButtonPressIcon3, ButtonPressIcon4, ButtonPressIcon5, ButtonPressIcon6, ButtonPressIcon7, ButtonPressIcon8, ButtonPressIcon9, ButtonPressIcon10, ButtonPressIcon11, ButtonPressIcon12, ButtonPressIcon13, ButtonPressIcon14, ButtonPressIcon15 };
-                my_pin_no_pic_a = new PictureBox[] { Pin01A_pb, Pin02A_pb, Pin03A_pb, Pin04A_pb, Pin05A_pb, Pin06A_pb, Pin07A_pb, Pin08A_pb, Pin09A_pb, Pin10A_pb, Pin11A_pb, Pin12A_pb, Pin13A_pb, Pin14A_pb, Pin15A_pb };
-                my_pin_no_pic_b = new PictureBox[] { Pin01B_pb, Pin02B_pb, Pin03B_pb, Pin04B_pb, Pin05B_pb, Pin06B_pb, Pin07B_pb, Pin08B_pb, Pin09B_pb, Pin10B_pb, Pin11B_pb, Pin12B_pb, Pin13B_pb, Pin14B_pb, Pin15B_pb };
+                my_lbl_sw_assign = new Label[] { DeviceAssign_lbl1, DeviceAssign_lbl2, DeviceAssign_lbl3, DeviceAssign_lbl4, DeviceAssign_lbl5, 
+                                                DeviceAssign_lbl6, DeviceAssign_lbl7, DeviceAssign_lbl8, DeviceAssign_lbl9, DeviceAssign_lbl10, 
+                                                DeviceAssign_lbl11, DeviceAssign_lbl12, DeviceAssign_lbl13, DeviceAssign_lbl14, DeviceAssign_lbl15,
+                                                DeviceAssign_lbl16, DeviceAssign_lbl17, DeviceAssign_lbl18, DeviceAssign_lbl19, DeviceAssign_lbl20, DeviceAssign_lbl21 };
+                my_lbl_sw_device_type = new Label[] { devicetype_lbl1, devicetype_lbl2, devicetype_lbl3, devicetype_lbl4, devicetype_lbl5, 
+                                                    devicetype_lbl6, devicetype_lbl7, devicetype_lbl8, devicetype_lbl9, devicetype_lbl10, 
+                                                    devicetype_lbl11, devicetype_lbl12, devicetype_lbl13, devicetype_lbl14, devicetype_lbl15, 
+                                                    devicetype_lbl16, devicetype_lbl17, devicetype_lbl18, devicetype_lbl19, devicetype_lbl20, devicetype_lbl21 };
+                my_pic_sw_status = new PictureBox[] { ButtonPressIcon1, ButtonPressIcon2, ButtonPressIcon3, ButtonPressIcon4, ButtonPressIcon5, 
+                                                    ButtonPressIcon6, ButtonPressIcon7, ButtonPressIcon8, ButtonPressIcon9, ButtonPressIcon10, 
+                                                    ButtonPressIcon11, ButtonPressIcon12, ButtonPressIcon13, ButtonPressIcon14, ButtonPressIcon15, 
+                                                    ButtonPressIcon16, ButtonPressIcon17, ButtonPressIcon18, ButtonPressIcon19, ButtonPressIcon20, ButtonPressIcon21 };
+                my_pin_no_pic_a = new PictureBox[] { Pin01A_pb, Pin02A_pb, Pin03A_pb, Pin04A_pb, Pin05A_pb, 
+                                                    Pin06A_pb, Pin07A_pb, Pin08A_pb, Pin09A_pb, Pin10A_pb, 
+                                                    Pin11A_pb, Pin12A_pb, Pin13A_pb, Pin14A_pb, Pin15A_pb, 
+                                                    Pin16A_pb, Pin17A_pb, Pin18A_pb, Pin19A_pb, Pin20A_pb, Pin21A_pb };
+                my_pin_no_pic_b = new PictureBox[] { Pin01B_pb, Pin02B_pb, Pin03B_pb, Pin04B_pb, Pin05B_pb, 
+                                                    Pin06B_pb, Pin07B_pb, Pin08B_pb, Pin09B_pb, Pin10B_pb, 
+                                                    Pin11B_pb, Pin12B_pb, Pin13B_pb, Pin14B_pb, Pin15B_pb, 
+                                                    Pin16B_pb, Pin17B_pb, Pin18B_pb, Pin19B_pb, Pin20B_pb, Pin21B_pb };
 
-                my_lbl_an_status = new Label[] { lbl_analog1_status, lbl_analog2_status, lbl_analog3_status, lbl_analog4_status, lbl_analog5_status, lbl_analog6_status, lbl_analog7_status, lbl_analog8_status };
-                my_lbl_an_assign = new Label[] { lbl_analog1_assign, lbl_analog2_assign, lbl_analog3_assign, lbl_analog4_assign, lbl_analog5_assign, lbl_analog6_assign, lbl_analog7_assign, lbl_analog8_assign };
-                my_an_pin_no_pic_a = new PictureBox[] { PinAN01A_pb, PinAN02A_pb, PinAN03A_pb, PinAN04A_pb, PinAN05A_pb, PinAN06A_pb, PinAN07A_pb, PinAN08A_pb };
-                my_an_pin_no_pic_b = new PictureBox[] { PinAN01B_pb, PinAN02B_pb, PinAN03B_pb, PinAN04B_pb, PinAN05B_pb, PinAN06B_pb, PinAN07B_pb, PinAN08B_pb };
+                my_lbl_an_status = new Label[] { lbl_analog1_status, lbl_analog2_status };
+                my_lbl_an_assign = new Label[] { lbl_analog1_assign, lbl_analog2_assign };
+                my_an_pin_no_pic_a = new PictureBox[] { PinAN01A_pb, PinAN02A_pb};
+                my_an_pin_no_pic_b = new PictureBox[] { PinAN01B_pb, PinAN02B_pb};
 
                 my_chkbx_keyboard_modifier = new CheckBox[] { Ctrl_cbox, Shift_cbox, Alt_cbox, Win_cbox };
                 my_chkbx_joystick_lever = new CheckBox[] { LeverXP_cbox, LeverXM_cbox, LeverYP_cbox, LeverYM_cbox, LeverZP_cbox, LeverZM_cbox, LeverRXP_cbox, LeverRXM_cbox, LeverRYP_cbox, LeverRYM_cbox, LeverRZP_cbox, LeverRZM_cbox, LeverSliderP_cbox, LeverSliderM_cbox };
@@ -4875,8 +4890,8 @@ namespace ReviveUSBAdvance
     {
         public const string APPLICATION_NAME = "Revive USB Advance Configuration Tool";
 
-        public const int DIGITAL_INPUT_NUM = 15;
-        public const int ANALOG_INPUT_NUM = 8;
+        public const int DIGITAL_INPUT_NUM = 21;
+        public const int ANALOG_INPUT_NUM = 2;
 
         public const string FIRMWARE_VERSION_STR = "FW Version : ";    /* ファームウェアバージョン文字 */
 
@@ -4918,7 +4933,7 @@ namespace ReviveUSBAdvance
         public const uint ANALOG_INPUT_CENTER_DEFAULT_VALUE = 0x200;
 
         // SW 設定
-        public const int SW_SETTING_NUM                         = 15;  // 設定数 15
+        public const int SW_SETTING_NUM                         = 21;  // 設定数 15
         public const int SW_DEVICE_DATA_LEN                     = 16;   // SWデバイス設定データ長
 
         public const int SW_DEVICE_DATA_SET_DEVICE_TYPE_IDX     = 0;    // デバイス設定データ  デバイスタイプ格納位置
@@ -5024,7 +5039,7 @@ namespace ReviveUSBAdvance
         public const int HAT_SWITCH_INDEX_LEFT              = 3;
 
         // AN 設定
-        public const int AN_SETTING_NUM                         = 8;  // 設定数 8
+        public const int AN_SETTING_NUM                         = 2;  // 設定数 8
         public const int AN_DEVICE_DATA_LEN                     = 32;   // ANデバイス設定データ長
 
         public const int AN_DEVICE_DATA_SET_DEVICE_TYPE_IDX     = 0;    // デバイス設定データ  デバイスタイプ格納位置

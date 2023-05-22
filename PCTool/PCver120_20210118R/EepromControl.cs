@@ -37,9 +37,9 @@ namespace ReviveUSBAdvance
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// SW設定情報
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        public const int E2P_SW_INFO_AREA_ALL_SIZE          = 0x0000F0;   // SW設定情報 全サイズ
+        public const int E2P_SW_INFO_AREA_ALL_SIZE          = 0x000150;   // SW設定情報 全サイズ
         public const int E2P_ADR_SW_INFO                    = 0x000010;   // SW設定情報 保存先頭アドレス
-        public const int E2P_SW_INFO_AREA_SIZE              = 0x0000F0;   // SW設定情報 保存エリアサイズ
+        public const int E2P_SW_INFO_AREA_SIZE              = 0x000150;   // SW設定情報 保存エリアサイズ
         public const int E2P_SW_INFO_SW_DATA_SIZE           = 0x000010;   // SW設定情報 SW DATAサイズ
 
         // SW設定情報格納位置オフセット
@@ -59,24 +59,32 @@ namespace ReviveUSBAdvance
         public const int E2P_OFSET_SW_INFO_SW13_DATA_TOP = 0x0000C0; // SW設定情報 SW13 DATA先頭
         public const int E2P_OFSET_SW_INFO_SW14_DATA_TOP = 0x0000D0; // SW設定情報 SW14 DATA先頭
         public const int E2P_OFSET_SW_INFO_SW15_DATA_TOP = 0x0000E0; // SW設定情報 SW15 DATA先頭
+
+        public const int E2P_OFSET_SW_INFO_SW16_DATA_TOP = 0x0000F0; // SW設定情報 SW16 DATA先頭
+        public const int E2P_OFSET_SW_INFO_SW17_DATA_TOP = 0x000100; // SW設定情報 SW17 DATA先頭
+        public const int E2P_OFSET_SW_INFO_SW18_DATA_TOP = 0x000110; // SW設定情報 SW18 DATA先頭
+        public const int E2P_OFSET_SW_INFO_SW19_DATA_TOP = 0x000120; // SW設定情報 SW19 DATA先頭
+        public const int E2P_OFSET_SW_INFO_SW20_DATA_TOP = 0x000130; // SW設定情報 SW20 DATA先頭
+        public const int E2P_OFSET_SW_INFO_SW21_DATA_TOP = 0x000140; // SW設定情報 SW21 DATA先頭
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         /// AN設定情報
         ////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-        public const int E2P_AN_INFO_AREA_ALL_SIZE              = 0x000100;   // AN設定情報 全サイズ
-        public const int E2P_ADR_AN_INFO                        = 0x000100;   // AN設定情報 保存先頭アドレス
-        public const int E2P_AN_INFO_AREA_SIZE                  = 0x000100;   // AN設定情報 保存エリアサイズ
+        public const int E2P_AN_INFO_AREA_ALL_SIZE              = 0x000040;   // AN設定情報 全サイズ
+        public const int E2P_ADR_AN_INFO                        = 0x000040;   // AN設定情報 保存先頭アドレス
+        public const int E2P_AN_INFO_AREA_SIZE                  = 0x000040;   // AN設定情報 保存エリアサイズ
         public const int E2P_AN_INFO_AN_DATA_SIZE               = 0x000020;   // AN設定情報 AN DATAサイズ
         // AN設定情報格納位置オフセット
         public const int E2P_OFSET_AN_INFO_AN_DATA_TOP = 0x000000; // AN設定情報 AN DATA先頭
         public const int E2P_OFSET_AN_INFO_AN1_DATA_TOP = 0x000000; // AN設定情報 AN1 DATA先頭
         public const int E2P_OFSET_AN_INFO_AN2_DATA_TOP = 0x000020; // AN設定情報 AN2 DATA先頭
+        /*
         public const int E2P_OFSET_AN_INFO_AN3_DATA_TOP = 0x000040; // AN設定情報 AN3 DATA先頭
         public const int E2P_OFSET_AN_INFO_AN4_DATA_TOP = 0x000060; // AN設定情報 AN4 DATA先頭
         public const int E2P_OFSET_AN_INFO_AN5_DATA_TOP = 0x000080; // AN設定情報 AN5 DATA先頭
         public const int E2P_OFSET_AN_INFO_AN6_DATA_TOP = 0x0000A0; // AN設定情報 AN6 DATA先頭
         public const int E2P_OFSET_AN_INFO_AN7_DATA_TOP = 0x0000C0; // AN設定情報 AN7 DATA先頭
         public const int E2P_OFSET_AN_INFO_AN8_DATA_TOP = 0x0000E0; // AN設定情報 AN8 DATA先頭
-
+        */
 
         public const uint E2P_READ_TYPE_SW_SETTING          = 0x0001;     // 
         public const uint E2P_READ_TYPE_AN_SETTING          = 0x0002;     // 

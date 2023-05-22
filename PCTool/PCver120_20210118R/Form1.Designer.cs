@@ -29,10 +29,10 @@ namespace ReviveUSBAdvance
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.ReadWriteThread = new System.ComponentModel.BackgroundWorker();
             this.FormUpdateTimer = new System.Windows.Forms.Timer(this.components);
             this.KeyboardValue_txtbx = new System.Windows.Forms.TextBox();
@@ -96,14 +96,8 @@ namespace ReviveUSBAdvance
             this.num_analog_dead_zone = new System.Windows.Forms.NumericUpDown();
             this.chkbx_center_calibration = new System.Windows.Forms.CheckBox();
             this.lbl_analog_sensitivity = new System.Windows.Forms.Label();
-            this.pic_analog_arrow5 = new System.Windows.Forms.PictureBox();
-            this.pic_analog_arrow4 = new System.Windows.Forms.PictureBox();
-            this.pic_analog_arrow3 = new System.Windows.Forms.PictureBox();
-            this.pic_analog_arrow2 = new System.Windows.Forms.PictureBox();
-            this.pic_analog_arrow1 = new System.Windows.Forms.PictureBox();
             this.lbl_analog_set_type = new System.Windows.Forms.Label();
             this.lbl_analog_pin_no = new System.Windows.Forms.Label();
-            this.btn_analog_set = new System.Windows.Forms.Button();
             this.lbl_input_vol5 = new System.Windows.Forms.Label();
             this.num_output_val5 = new System.Windows.Forms.NumericUpDown();
             this.num_output_val4 = new System.Windows.Forms.NumericUpDown();
@@ -150,18 +144,6 @@ namespace ReviveUSBAdvance
             this.lbl_analog1_assign = new System.Windows.Forms.Label();
             this.lbl_analog2_assign = new System.Windows.Forms.Label();
             this.lbl_analog2_status = new System.Windows.Forms.Label();
-            this.lbl_analog3_assign = new System.Windows.Forms.Label();
-            this.lbl_analog3_status = new System.Windows.Forms.Label();
-            this.lbl_analog4_assign = new System.Windows.Forms.Label();
-            this.lbl_analog4_status = new System.Windows.Forms.Label();
-            this.lbl_analog8_assign = new System.Windows.Forms.Label();
-            this.lbl_analog8_status = new System.Windows.Forms.Label();
-            this.lbl_analog7_assign = new System.Windows.Forms.Label();
-            this.lbl_analog7_status = new System.Windows.Forms.Label();
-            this.lbl_analog6_assign = new System.Windows.Forms.Label();
-            this.lbl_analog6_status = new System.Windows.Forms.Label();
-            this.lbl_analog5_assign = new System.Windows.Forms.Label();
-            this.lbl_analog5_status = new System.Windows.Forms.Label();
             this.hatsw_up_cbox = new System.Windows.Forms.CheckBox();
             this.hatsw_right_cbox = new System.Windows.Forms.CheckBox();
             this.hatsw_down_cbox = new System.Windows.Forms.CheckBox();
@@ -183,12 +165,6 @@ namespace ReviveUSBAdvance
             this.lbl_digital_assign = new System.Windows.Forms.Label();
             this.lbl_digital_device_type = new System.Windows.Forms.Label();
             this.lbl_digital_pin_no = new System.Windows.Forms.Label();
-            this.btn_digital_set = new System.Windows.Forms.Button();
-            this.Arrow_Com_pb = new System.Windows.Forms.PictureBox();
-            this.Arrow_Mouse1_pb = new System.Windows.Forms.PictureBox();
-            this.Arrow_Mouse2_pb = new System.Windows.Forms.PictureBox();
-            this.Arrow_Mouse3_pb = new System.Windows.Forms.PictureBox();
-            this.Arrow_Keyboard_pb = new System.Windows.Forms.PictureBox();
             this.listView1 = new System.Windows.Forms.ListView();
             this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -196,26 +172,38 @@ namespace ReviveUSBAdvance
             this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.gbx_setting_list = new System.Windows.Forms.GroupBox();
             this.pnl_analog_setting = new System.Windows.Forms.Panel();
+            this.pic_analog_arrow5 = new System.Windows.Forms.PictureBox();
+            this.pic_analog_arrow4 = new System.Windows.Forms.PictureBox();
+            this.pic_analog_arrow3 = new System.Windows.Forms.PictureBox();
+            this.pic_analog_arrow2 = new System.Windows.Forms.PictureBox();
+            this.pic_analog_arrow1 = new System.Windows.Forms.PictureBox();
+            this.btn_analog_set = new System.Windows.Forms.Button();
             this.pnl_digital_setting = new System.Windows.Forms.Panel();
+            this.Arrow_Keyboard_pb = new System.Windows.Forms.PictureBox();
+            this.Arrow_Mouse3_pb = new System.Windows.Forms.PictureBox();
+            this.Arrow_Mouse2_pb = new System.Windows.Forms.PictureBox();
+            this.Arrow_Mouse1_pb = new System.Windows.Forms.PictureBox();
+            this.Arrow_Com_pb = new System.Windows.Forms.PictureBox();
+            this.btn_digital_set = new System.Windows.Forms.Button();
             this.Revive_Advance_Device_pb = new System.Windows.Forms.PictureBox();
             this.dig_tabA_pb = new System.Windows.Forms.PictureBox();
             this.ana_tabA_pb = new System.Windows.Forms.PictureBox();
             this.dig_tabB_pb = new System.Windows.Forms.PictureBox();
             this.ana_tabB_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN08A_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN07A_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN06A_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN05A_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN04A_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN03A_pb = new System.Windows.Forms.PictureBox();
+            this.Pin21A_pb = new System.Windows.Forms.PictureBox();
+            this.Pin20A_pb = new System.Windows.Forms.PictureBox();
+            this.Pin19A_pb = new System.Windows.Forms.PictureBox();
+            this.Pin18A_pb = new System.Windows.Forms.PictureBox();
+            this.Pin17A_pb = new System.Windows.Forms.PictureBox();
+            this.Pin16A_pb = new System.Windows.Forms.PictureBox();
             this.PinAN02A_pb = new System.Windows.Forms.PictureBox();
             this.PinAN01A_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN08B_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN07B_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN06B_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN05B_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN04B_pb = new System.Windows.Forms.PictureBox();
-            this.PinAN03B_pb = new System.Windows.Forms.PictureBox();
+            this.Pin21B_pb = new System.Windows.Forms.PictureBox();
+            this.Pin20B_pb = new System.Windows.Forms.PictureBox();
+            this.Pin19B_pb = new System.Windows.Forms.PictureBox();
+            this.Pin18B_pb = new System.Windows.Forms.PictureBox();
+            this.Pin17B_pb = new System.Windows.Forms.PictureBox();
+            this.Pin16B_pb = new System.Windows.Forms.PictureBox();
             this.PinAN02B_pb = new System.Windows.Forms.PictureBox();
             this.PinAN01B_pb = new System.Windows.Forms.PictureBox();
             this.Pin06A_pb = new System.Windows.Forms.PictureBox();
@@ -267,15 +255,28 @@ namespace ReviveUSBAdvance
             this.Pin12B_pb = new System.Windows.Forms.PictureBox();
             this.Status_NC_pb = new System.Windows.Forms.PictureBox();
             this.BackGround_pb = new System.Windows.Forms.PictureBox();
+            this.ButtonPressIcon16 = new System.Windows.Forms.PictureBox();
+            this.ButtonPressIcon17 = new System.Windows.Forms.PictureBox();
+            this.ButtonPressIcon18 = new System.Windows.Forms.PictureBox();
+            this.ButtonPressIcon19 = new System.Windows.Forms.PictureBox();
+            this.ButtonPressIcon20 = new System.Windows.Forms.PictureBox();
+            this.ButtonPressIcon21 = new System.Windows.Forms.PictureBox();
+            this.DeviceAssign_lbl16 = new System.Windows.Forms.Label();
+            this.devicetype_lbl16 = new System.Windows.Forms.Label();
+            this.DeviceAssign_lbl17 = new System.Windows.Forms.Label();
+            this.devicetype_lbl17 = new System.Windows.Forms.Label();
+            this.DeviceAssign_lbl18 = new System.Windows.Forms.Label();
+            this.devicetype_lbl18 = new System.Windows.Forms.Label();
+            this.DeviceAssign_lbl19 = new System.Windows.Forms.Label();
+            this.devicetype_lbl19 = new System.Windows.Forms.Label();
+            this.DeviceAssign_lbl20 = new System.Windows.Forms.Label();
+            this.devicetype_lbl20 = new System.Windows.Forms.Label();
+            this.DeviceAssign_lbl21 = new System.Windows.Forms.Label();
+            this.devicetype_lbl21 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.MouseMove_UD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_analog_sensitivity)).BeginInit();
             this.gbx_analog_calibration.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_analog_dead_zone)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_output_val5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_output_val4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_input_vol4)).BeginInit();
@@ -287,33 +288,38 @@ namespace ReviveUSBAdvance
             ((System.ComponentModel.ISupportInitialize)(this.num_input_vol2)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.groupBox5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Com_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse1_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse2_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse3_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Keyboard_pb)).BeginInit();
             this.gbx_setting_list.SuspendLayout();
             this.pnl_analog_setting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow1)).BeginInit();
             this.pnl_digital_setting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Keyboard_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse3_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse2_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse1_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Com_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Revive_Advance_Device_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dig_tabA_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ana_tabA_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dig_tabB_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ana_tabB_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN08A_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN07A_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN06A_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN05A_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN04A_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN03A_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin21A_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin20A_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin19A_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin18A_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin17A_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin16A_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PinAN02A_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PinAN01A_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN08B_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN07B_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN06B_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN05B_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN04B_pb)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN03B_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin21B_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin20B_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin19B_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin18B_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin17B_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin16B_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PinAN02B_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PinAN01B_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pin06A_pb)).BeginInit();
@@ -365,6 +371,12 @@ namespace ReviveUSBAdvance
             ((System.ComponentModel.ISupportInitialize)(this.Pin12B_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Status_NC_pb)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackGround_pb)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon18)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon20)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon21)).BeginInit();
             this.SuspendLayout();
             // 
             // ReadWriteThread
@@ -763,7 +775,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl4.AutoSize = true;
             this.devicetype_lbl4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl4.Location = new System.Drawing.Point(1049, 289);
+            this.devicetype_lbl4.Location = new System.Drawing.Point(1049, 203);
             this.devicetype_lbl4.Name = "devicetype_lbl4";
             this.devicetype_lbl4.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl4.TabIndex = 99;
@@ -775,7 +787,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl1.AutoSize = true;
             this.devicetype_lbl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl1.Location = new System.Drawing.Point(1049, 154);
+            this.devicetype_lbl1.Location = new System.Drawing.Point(1049, 105);
             this.devicetype_lbl1.Name = "devicetype_lbl1";
             this.devicetype_lbl1.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl1.TabIndex = 100;
@@ -787,7 +799,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl3.AutoSize = true;
             this.devicetype_lbl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl3.Location = new System.Drawing.Point(1048, 237);
+            this.devicetype_lbl3.Location = new System.Drawing.Point(1049, 170);
             this.devicetype_lbl3.Name = "devicetype_lbl3";
             this.devicetype_lbl3.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl3.TabIndex = 101;
@@ -799,7 +811,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl2.AutoSize = true;
             this.devicetype_lbl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl2.Location = new System.Drawing.Point(1049, 185);
+            this.devicetype_lbl2.Location = new System.Drawing.Point(1050, 138);
             this.devicetype_lbl2.Name = "devicetype_lbl2";
             this.devicetype_lbl2.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl2.TabIndex = 102;
@@ -811,7 +823,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl9.AutoSize = true;
             this.devicetype_lbl9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl9.Location = new System.Drawing.Point(1284, 289);
+            this.devicetype_lbl9.Location = new System.Drawing.Point(1117, 170);
             this.devicetype_lbl9.Name = "devicetype_lbl9";
             this.devicetype_lbl9.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl9.TabIndex = 103;
@@ -823,7 +835,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl8.AutoSize = true;
             this.devicetype_lbl8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl8.Location = new System.Drawing.Point(1284, 341);
+            this.devicetype_lbl8.Location = new System.Drawing.Point(1117, 138);
             this.devicetype_lbl8.Name = "devicetype_lbl8";
             this.devicetype_lbl8.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl8.TabIndex = 104;
@@ -835,7 +847,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl7.AutoSize = true;
             this.devicetype_lbl7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl7.Location = new System.Drawing.Point(1284, 393);
+            this.devicetype_lbl7.Location = new System.Drawing.Point(1117, 105);
             this.devicetype_lbl7.Name = "devicetype_lbl7";
             this.devicetype_lbl7.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl7.TabIndex = 105;
@@ -847,7 +859,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl4.AutoSize = true;
             this.DeviceAssign_lbl4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl4.Location = new System.Drawing.Point(1049, 301);
+            this.DeviceAssign_lbl4.Location = new System.Drawing.Point(1049, 215);
             this.DeviceAssign_lbl4.Name = "DeviceAssign_lbl4";
             this.DeviceAssign_lbl4.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl4.TabIndex = 106;
@@ -860,7 +872,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl1.AutoSize = true;
             this.DeviceAssign_lbl1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl1.Location = new System.Drawing.Point(1049, 166);
+            this.DeviceAssign_lbl1.Location = new System.Drawing.Point(1049, 117);
             this.DeviceAssign_lbl1.Name = "DeviceAssign_lbl1";
             this.DeviceAssign_lbl1.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl1.TabIndex = 107;
@@ -873,7 +885,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl3.AutoSize = true;
             this.DeviceAssign_lbl3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl3.Location = new System.Drawing.Point(1048, 249);
+            this.DeviceAssign_lbl3.Location = new System.Drawing.Point(1049, 182);
             this.DeviceAssign_lbl3.Name = "DeviceAssign_lbl3";
             this.DeviceAssign_lbl3.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl3.TabIndex = 108;
@@ -886,7 +898,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl2.AutoSize = true;
             this.DeviceAssign_lbl2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl2.Location = new System.Drawing.Point(1048, 197);
+            this.DeviceAssign_lbl2.Location = new System.Drawing.Point(1049, 150);
             this.DeviceAssign_lbl2.Name = "DeviceAssign_lbl2";
             this.DeviceAssign_lbl2.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl2.TabIndex = 109;
@@ -899,7 +911,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl9.AutoSize = true;
             this.DeviceAssign_lbl9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl9.Location = new System.Drawing.Point(1284, 301);
+            this.DeviceAssign_lbl9.Location = new System.Drawing.Point(1117, 182);
             this.DeviceAssign_lbl9.Name = "DeviceAssign_lbl9";
             this.DeviceAssign_lbl9.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl9.TabIndex = 110;
@@ -912,7 +924,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl8.AutoSize = true;
             this.DeviceAssign_lbl8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl8.Location = new System.Drawing.Point(1284, 353);
+            this.DeviceAssign_lbl8.Location = new System.Drawing.Point(1117, 150);
             this.DeviceAssign_lbl8.Name = "DeviceAssign_lbl8";
             this.DeviceAssign_lbl8.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl8.TabIndex = 111;
@@ -925,7 +937,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl7.AutoSize = true;
             this.DeviceAssign_lbl7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl7.Location = new System.Drawing.Point(1284, 405);
+            this.DeviceAssign_lbl7.Location = new System.Drawing.Point(1117, 117);
             this.DeviceAssign_lbl7.Name = "DeviceAssign_lbl7";
             this.DeviceAssign_lbl7.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl7.TabIndex = 112;
@@ -960,7 +972,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl5.AutoSize = true;
             this.devicetype_lbl5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl5.Location = new System.Drawing.Point(1049, 341);
+            this.devicetype_lbl5.Location = new System.Drawing.Point(1049, 237);
             this.devicetype_lbl5.Name = "devicetype_lbl5";
             this.devicetype_lbl5.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl5.TabIndex = 153;
@@ -972,7 +984,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl6.AutoSize = true;
             this.devicetype_lbl6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl6.Location = new System.Drawing.Point(1049, 393);
+            this.devicetype_lbl6.Location = new System.Drawing.Point(1049, 268);
             this.devicetype_lbl6.Name = "devicetype_lbl6";
             this.devicetype_lbl6.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl6.TabIndex = 154;
@@ -984,7 +996,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl5.AutoSize = true;
             this.DeviceAssign_lbl5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl5.Location = new System.Drawing.Point(1049, 353);
+            this.DeviceAssign_lbl5.Location = new System.Drawing.Point(1049, 249);
             this.DeviceAssign_lbl5.Name = "DeviceAssign_lbl5";
             this.DeviceAssign_lbl5.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl5.TabIndex = 155;
@@ -997,7 +1009,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl6.AutoSize = true;
             this.DeviceAssign_lbl6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl6.Location = new System.Drawing.Point(1049, 405);
+            this.DeviceAssign_lbl6.Location = new System.Drawing.Point(1049, 280);
             this.DeviceAssign_lbl6.Name = "DeviceAssign_lbl6";
             this.DeviceAssign_lbl6.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl6.TabIndex = 156;
@@ -1010,7 +1022,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl10.AutoSize = true;
             this.devicetype_lbl10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl10.Location = new System.Drawing.Point(1284, 237);
+            this.devicetype_lbl10.Location = new System.Drawing.Point(1117, 204);
             this.devicetype_lbl10.Name = "devicetype_lbl10";
             this.devicetype_lbl10.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl10.TabIndex = 157;
@@ -1022,7 +1034,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl11.AutoSize = true;
             this.devicetype_lbl11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl11.Location = new System.Drawing.Point(1284, 185);
+            this.devicetype_lbl11.Location = new System.Drawing.Point(1117, 237);
             this.devicetype_lbl11.Name = "devicetype_lbl11";
             this.devicetype_lbl11.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl11.TabIndex = 158;
@@ -1034,7 +1046,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl12.AutoSize = true;
             this.devicetype_lbl12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl12.Location = new System.Drawing.Point(1284, 132);
+            this.devicetype_lbl12.Location = new System.Drawing.Point(1117, 268);
             this.devicetype_lbl12.Name = "devicetype_lbl12";
             this.devicetype_lbl12.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl12.TabIndex = 159;
@@ -1046,7 +1058,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl10.AutoSize = true;
             this.DeviceAssign_lbl10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl10.Location = new System.Drawing.Point(1284, 249);
+            this.DeviceAssign_lbl10.Location = new System.Drawing.Point(1117, 216);
             this.DeviceAssign_lbl10.Name = "DeviceAssign_lbl10";
             this.DeviceAssign_lbl10.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl10.TabIndex = 160;
@@ -1059,7 +1071,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl11.AutoSize = true;
             this.DeviceAssign_lbl11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl11.Location = new System.Drawing.Point(1284, 197);
+            this.DeviceAssign_lbl11.Location = new System.Drawing.Point(1117, 249);
             this.DeviceAssign_lbl11.Name = "DeviceAssign_lbl11";
             this.DeviceAssign_lbl11.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl11.TabIndex = 161;
@@ -1072,7 +1084,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl12.AutoSize = true;
             this.DeviceAssign_lbl12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl12.Location = new System.Drawing.Point(1284, 144);
+            this.DeviceAssign_lbl12.Location = new System.Drawing.Point(1117, 280);
             this.DeviceAssign_lbl12.Name = "DeviceAssign_lbl12";
             this.DeviceAssign_lbl12.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl12.TabIndex = 162;
@@ -1179,56 +1191,6 @@ namespace ReviveUSBAdvance
             this.lbl_analog_sensitivity.TabIndex = 205;
             this.lbl_analog_sensitivity.Text = "ä¥ìx[í· 1 <---> 100 çÇ]";
             // 
-            // pic_analog_arrow5
-            // 
-            this.pic_analog_arrow5.BackColor = System.Drawing.Color.Transparent;
-            this.pic_analog_arrow5.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
-            this.pic_analog_arrow5.Location = new System.Drawing.Point(106, 257);
-            this.pic_analog_arrow5.Name = "pic_analog_arrow5";
-            this.pic_analog_arrow5.Size = new System.Drawing.Size(12, 9);
-            this.pic_analog_arrow5.TabIndex = 254;
-            this.pic_analog_arrow5.TabStop = false;
-            // 
-            // pic_analog_arrow4
-            // 
-            this.pic_analog_arrow4.BackColor = System.Drawing.Color.Transparent;
-            this.pic_analog_arrow4.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
-            this.pic_analog_arrow4.Location = new System.Drawing.Point(106, 232);
-            this.pic_analog_arrow4.Name = "pic_analog_arrow4";
-            this.pic_analog_arrow4.Size = new System.Drawing.Size(12, 9);
-            this.pic_analog_arrow4.TabIndex = 253;
-            this.pic_analog_arrow4.TabStop = false;
-            // 
-            // pic_analog_arrow3
-            // 
-            this.pic_analog_arrow3.BackColor = System.Drawing.Color.Transparent;
-            this.pic_analog_arrow3.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
-            this.pic_analog_arrow3.Location = new System.Drawing.Point(106, 197);
-            this.pic_analog_arrow3.Name = "pic_analog_arrow3";
-            this.pic_analog_arrow3.Size = new System.Drawing.Size(12, 9);
-            this.pic_analog_arrow3.TabIndex = 252;
-            this.pic_analog_arrow3.TabStop = false;
-            // 
-            // pic_analog_arrow2
-            // 
-            this.pic_analog_arrow2.BackColor = System.Drawing.Color.Transparent;
-            this.pic_analog_arrow2.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
-            this.pic_analog_arrow2.Location = new System.Drawing.Point(106, 162);
-            this.pic_analog_arrow2.Name = "pic_analog_arrow2";
-            this.pic_analog_arrow2.Size = new System.Drawing.Size(12, 9);
-            this.pic_analog_arrow2.TabIndex = 251;
-            this.pic_analog_arrow2.TabStop = false;
-            // 
-            // pic_analog_arrow1
-            // 
-            this.pic_analog_arrow1.BackColor = System.Drawing.Color.Transparent;
-            this.pic_analog_arrow1.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
-            this.pic_analog_arrow1.Location = new System.Drawing.Point(106, 137);
-            this.pic_analog_arrow1.Name = "pic_analog_arrow1";
-            this.pic_analog_arrow1.Size = new System.Drawing.Size(12, 9);
-            this.pic_analog_arrow1.TabIndex = 201;
-            this.pic_analog_arrow1.TabStop = false;
-            // 
             // lbl_analog_set_type
             // 
             this.lbl_analog_set_type.Location = new System.Drawing.Point(15, 54);
@@ -1246,16 +1208,6 @@ namespace ReviveUSBAdvance
             this.lbl_analog_pin_no.TabIndex = 201;
             this.lbl_analog_pin_no.Text = "ÉsÉìî‘çÜ";
             this.lbl_analog_pin_no.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
-            // 
-            // btn_analog_set
-            // 
-            this.btn_analog_set.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_analog_set.BackgroundImage")));
-            this.btn_analog_set.Location = new System.Drawing.Point(65, 435);
-            this.btn_analog_set.Name = "btn_analog_set";
-            this.btn_analog_set.Size = new System.Drawing.Size(121, 29);
-            this.btn_analog_set.TabIndex = 250;
-            this.btn_analog_set.UseVisualStyleBackColor = true;
-            this.btn_analog_set.Click += new System.EventHandler(this.btn_analog_set_Click);
             // 
             // lbl_input_vol5
             // 
@@ -1439,17 +1391,17 @@ namespace ReviveUSBAdvance
             // 
             // chart1
             // 
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(10, 280);
             this.chart1.Name = "chart1";
-            series1.ChartArea = "ChartArea1";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.ChartArea = "ChartArea1";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Line;
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(230, 130);
             this.chart1.TabIndex = 230;
             this.chart1.Text = "chart1";
@@ -1577,7 +1529,7 @@ namespace ReviveUSBAdvance
             this.colum_lbl.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.colum_lbl.Location = new System.Drawing.Point(15, 24);
             this.colum_lbl.Name = "colum_lbl";
-            this.colum_lbl.Size = new System.Drawing.Size(56, 16);
+            this.colum_lbl.Size = new System.Drawing.Size(55, 16);
             this.colum_lbl.TabIndex = 901;
             this.colum_lbl.Text = "label1";
             // 
@@ -1590,7 +1542,7 @@ namespace ReviveUSBAdvance
             this.Debug_label3.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Debug_label3.Location = new System.Drawing.Point(15, 84);
             this.Debug_label3.Name = "Debug_label3";
-            this.Debug_label3.Size = new System.Drawing.Size(56, 16);
+            this.Debug_label3.Size = new System.Drawing.Size(55, 16);
             this.Debug_label3.TabIndex = 904;
             this.Debug_label3.Text = "debug1";
             // 
@@ -1603,7 +1555,7 @@ namespace ReviveUSBAdvance
             this.Debug_label4.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Debug_label4.Location = new System.Drawing.Point(15, 104);
             this.Debug_label4.Name = "Debug_label4";
-            this.Debug_label4.Size = new System.Drawing.Size(56, 16);
+            this.Debug_label4.Size = new System.Drawing.Size(55, 16);
             this.Debug_label4.TabIndex = 905;
             this.Debug_label4.Text = "debug1";
             // 
@@ -1616,7 +1568,7 @@ namespace ReviveUSBAdvance
             this.Debug_label2.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Debug_label2.Location = new System.Drawing.Point(15, 64);
             this.Debug_label2.Name = "Debug_label2";
-            this.Debug_label2.Size = new System.Drawing.Size(56, 16);
+            this.Debug_label2.Size = new System.Drawing.Size(55, 16);
             this.Debug_label2.TabIndex = 903;
             this.Debug_label2.Text = "debug1";
             // 
@@ -1629,7 +1581,7 @@ namespace ReviveUSBAdvance
             this.Debug_label1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Debug_label1.Location = new System.Drawing.Point(15, 44);
             this.Debug_label1.Name = "Debug_label1";
-            this.Debug_label1.Size = new System.Drawing.Size(56, 16);
+            this.Debug_label1.Size = new System.Drawing.Size(55, 16);
             this.Debug_label1.TabIndex = 902;
             this.Debug_label1.Text = "debug1";
             // 
@@ -1771,7 +1723,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl13.AutoSize = true;
             this.DeviceAssign_lbl13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl13.Location = new System.Drawing.Point(1213, 117);
+            this.DeviceAssign_lbl13.Location = new System.Drawing.Point(1186, 117);
             this.DeviceAssign_lbl13.Name = "DeviceAssign_lbl13";
             this.DeviceAssign_lbl13.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl13.TabIndex = 956;
@@ -1784,7 +1736,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl13.AutoSize = true;
             this.devicetype_lbl13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl13.Location = new System.Drawing.Point(1213, 105);
+            this.devicetype_lbl13.Location = new System.Drawing.Point(1186, 105);
             this.devicetype_lbl13.Name = "devicetype_lbl13";
             this.devicetype_lbl13.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl13.TabIndex = 955;
@@ -1796,7 +1748,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl14.AutoSize = true;
             this.DeviceAssign_lbl14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl14.Location = new System.Drawing.Point(1212, 151);
+            this.DeviceAssign_lbl14.Location = new System.Drawing.Point(1186, 150);
             this.DeviceAssign_lbl14.Name = "DeviceAssign_lbl14";
             this.DeviceAssign_lbl14.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl14.TabIndex = 961;
@@ -1809,7 +1761,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl14.AutoSize = true;
             this.devicetype_lbl14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl14.Location = new System.Drawing.Point(1212, 139);
+            this.devicetype_lbl14.Location = new System.Drawing.Point(1186, 138);
             this.devicetype_lbl14.Name = "devicetype_lbl14";
             this.devicetype_lbl14.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl14.TabIndex = 960;
@@ -1821,7 +1773,7 @@ namespace ReviveUSBAdvance
             this.DeviceAssign_lbl15.AutoSize = true;
             this.DeviceAssign_lbl15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.DeviceAssign_lbl15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.DeviceAssign_lbl15.Location = new System.Drawing.Point(1213, 185);
+            this.DeviceAssign_lbl15.Location = new System.Drawing.Point(1186, 182);
             this.DeviceAssign_lbl15.Name = "DeviceAssign_lbl15";
             this.DeviceAssign_lbl15.Size = new System.Drawing.Size(40, 12);
             this.DeviceAssign_lbl15.TabIndex = 966;
@@ -1834,7 +1786,7 @@ namespace ReviveUSBAdvance
             this.devicetype_lbl15.AutoSize = true;
             this.devicetype_lbl15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.devicetype_lbl15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.devicetype_lbl15.Location = new System.Drawing.Point(1213, 173);
+            this.devicetype_lbl15.Location = new System.Drawing.Point(1186, 170);
             this.devicetype_lbl15.Name = "devicetype_lbl15";
             this.devicetype_lbl15.Size = new System.Drawing.Size(33, 12);
             this.devicetype_lbl15.TabIndex = 965;
@@ -1857,7 +1809,7 @@ namespace ReviveUSBAdvance
             this.lbl_analog1_assign.AutoSize = true;
             this.lbl_analog1_assign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.lbl_analog1_assign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog1_assign.Location = new System.Drawing.Point(1128, 206);
+            this.lbl_analog1_assign.Location = new System.Drawing.Point(1049, 44);
             this.lbl_analog1_assign.Name = "lbl_analog1_assign";
             this.lbl_analog1_assign.Size = new System.Drawing.Size(88, 12);
             this.lbl_analog1_assign.TabIndex = 968;
@@ -1870,7 +1822,7 @@ namespace ReviveUSBAdvance
             this.lbl_analog2_assign.AutoSize = true;
             this.lbl_analog2_assign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
             this.lbl_analog2_assign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog2_assign.Location = new System.Drawing.Point(1128, 233);
+            this.lbl_analog2_assign.Location = new System.Drawing.Point(1049, 71);
             this.lbl_analog2_assign.Name = "lbl_analog2_assign";
             this.lbl_analog2_assign.Size = new System.Drawing.Size(88, 12);
             this.lbl_analog2_assign.TabIndex = 970;
@@ -1888,150 +1840,6 @@ namespace ReviveUSBAdvance
             this.lbl_analog2_status.TabIndex = 969;
             this.lbl_analog2_status.Tag = "1";
             this.lbl_analog2_status.Text = "A2";
-            // 
-            // lbl_analog3_assign
-            // 
-            this.lbl_analog3_assign.AutoSize = true;
-            this.lbl_analog3_assign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog3_assign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog3_assign.Location = new System.Drawing.Point(1128, 261);
-            this.lbl_analog3_assign.Name = "lbl_analog3_assign";
-            this.lbl_analog3_assign.Size = new System.Drawing.Size(88, 12);
-            this.lbl_analog3_assign.TabIndex = 972;
-            this.lbl_analog3_assign.Tag = "2";
-            this.lbl_analog3_assign.Text = "AN 3PIN Assign";
-            this.lbl_analog3_assign.MouseEnter += new System.EventHandler(this.lbl_sw_assign_MouseEnter);
-            // 
-            // lbl_analog3_status
-            // 
-            this.lbl_analog3_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog3_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog3_status.Location = new System.Drawing.Point(393, 388);
-            this.lbl_analog3_status.Name = "lbl_analog3_status";
-            this.lbl_analog3_status.Size = new System.Drawing.Size(25, 12);
-            this.lbl_analog3_status.TabIndex = 971;
-            this.lbl_analog3_status.Tag = "2";
-            this.lbl_analog3_status.Text = "A3";
-            // 
-            // lbl_analog4_assign
-            // 
-            this.lbl_analog4_assign.AutoSize = true;
-            this.lbl_analog4_assign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog4_assign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog4_assign.Location = new System.Drawing.Point(1128, 289);
-            this.lbl_analog4_assign.Name = "lbl_analog4_assign";
-            this.lbl_analog4_assign.Size = new System.Drawing.Size(88, 12);
-            this.lbl_analog4_assign.TabIndex = 974;
-            this.lbl_analog4_assign.Tag = "3";
-            this.lbl_analog4_assign.Text = "AN 4PIN Assign";
-            this.lbl_analog4_assign.MouseEnter += new System.EventHandler(this.lbl_sw_assign_MouseEnter);
-            // 
-            // lbl_analog4_status
-            // 
-            this.lbl_analog4_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog4_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog4_status.Location = new System.Drawing.Point(418, 388);
-            this.lbl_analog4_status.Name = "lbl_analog4_status";
-            this.lbl_analog4_status.Size = new System.Drawing.Size(25, 12);
-            this.lbl_analog4_status.TabIndex = 973;
-            this.lbl_analog4_status.Tag = "3";
-            this.lbl_analog4_status.Text = "A4";
-            // 
-            // lbl_analog8_assign
-            // 
-            this.lbl_analog8_assign.AutoSize = true;
-            this.lbl_analog8_assign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog8_assign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog8_assign.Location = new System.Drawing.Point(1128, 409);
-            this.lbl_analog8_assign.Name = "lbl_analog8_assign";
-            this.lbl_analog8_assign.Size = new System.Drawing.Size(88, 12);
-            this.lbl_analog8_assign.TabIndex = 982;
-            this.lbl_analog8_assign.Tag = "7";
-            this.lbl_analog8_assign.Text = "AN 8PIN Assign";
-            this.lbl_analog8_assign.MouseEnter += new System.EventHandler(this.lbl_sw_assign_MouseEnter);
-            // 
-            // lbl_analog8_status
-            // 
-            this.lbl_analog8_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog8_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog8_status.Location = new System.Drawing.Point(592, 388);
-            this.lbl_analog8_status.Name = "lbl_analog8_status";
-            this.lbl_analog8_status.Size = new System.Drawing.Size(25, 12);
-            this.lbl_analog8_status.TabIndex = 981;
-            this.lbl_analog8_status.Tag = "7";
-            this.lbl_analog8_status.Text = "A8";
-            // 
-            // lbl_analog7_assign
-            // 
-            this.lbl_analog7_assign.AutoSize = true;
-            this.lbl_analog7_assign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog7_assign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog7_assign.Location = new System.Drawing.Point(1128, 379);
-            this.lbl_analog7_assign.Name = "lbl_analog7_assign";
-            this.lbl_analog7_assign.Size = new System.Drawing.Size(88, 12);
-            this.lbl_analog7_assign.TabIndex = 980;
-            this.lbl_analog7_assign.Tag = "6";
-            this.lbl_analog7_assign.Text = "AN 7PIN Assign";
-            this.lbl_analog7_assign.MouseEnter += new System.EventHandler(this.lbl_sw_assign_MouseEnter);
-            // 
-            // lbl_analog7_status
-            // 
-            this.lbl_analog7_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog7_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog7_status.Location = new System.Drawing.Point(567, 388);
-            this.lbl_analog7_status.Name = "lbl_analog7_status";
-            this.lbl_analog7_status.Size = new System.Drawing.Size(25, 12);
-            this.lbl_analog7_status.TabIndex = 979;
-            this.lbl_analog7_status.Tag = "6";
-            this.lbl_analog7_status.Text = "A7";
-            // 
-            // lbl_analog6_assign
-            // 
-            this.lbl_analog6_assign.AutoSize = true;
-            this.lbl_analog6_assign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog6_assign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog6_assign.Location = new System.Drawing.Point(1128, 351);
-            this.lbl_analog6_assign.Name = "lbl_analog6_assign";
-            this.lbl_analog6_assign.Size = new System.Drawing.Size(88, 12);
-            this.lbl_analog6_assign.TabIndex = 978;
-            this.lbl_analog6_assign.Tag = "5";
-            this.lbl_analog6_assign.Text = "AN 6PIN Assign";
-            this.lbl_analog6_assign.MouseEnter += new System.EventHandler(this.lbl_sw_assign_MouseEnter);
-            // 
-            // lbl_analog6_status
-            // 
-            this.lbl_analog6_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog6_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog6_status.Location = new System.Drawing.Point(542, 388);
-            this.lbl_analog6_status.Name = "lbl_analog6_status";
-            this.lbl_analog6_status.Size = new System.Drawing.Size(25, 12);
-            this.lbl_analog6_status.TabIndex = 977;
-            this.lbl_analog6_status.Tag = "5";
-            this.lbl_analog6_status.Text = "A6";
-            // 
-            // lbl_analog5_assign
-            // 
-            this.lbl_analog5_assign.AutoSize = true;
-            this.lbl_analog5_assign.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog5_assign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog5_assign.Location = new System.Drawing.Point(1128, 324);
-            this.lbl_analog5_assign.Name = "lbl_analog5_assign";
-            this.lbl_analog5_assign.Size = new System.Drawing.Size(88, 12);
-            this.lbl_analog5_assign.TabIndex = 976;
-            this.lbl_analog5_assign.Tag = "4";
-            this.lbl_analog5_assign.Text = "AN 5PIN Assign";
-            this.lbl_analog5_assign.MouseEnter += new System.EventHandler(this.lbl_sw_assign_MouseEnter);
-            // 
-            // lbl_analog5_status
-            // 
-            this.lbl_analog5_status.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
-            this.lbl_analog5_status.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
-            this.lbl_analog5_status.Location = new System.Drawing.Point(443, 388);
-            this.lbl_analog5_status.Name = "lbl_analog5_status";
-            this.lbl_analog5_status.Size = new System.Drawing.Size(25, 12);
-            this.lbl_analog5_status.TabIndex = 975;
-            this.lbl_analog5_status.Tag = "4";
-            this.lbl_analog5_status.Text = "A5";
             // 
             // hatsw_up_cbox
             // 
@@ -2294,72 +2102,6 @@ namespace ReviveUSBAdvance
             this.lbl_digital_pin_no.Text = "ÉsÉìî‘çÜ";
             this.lbl_digital_pin_no.TextAlign = System.Drawing.ContentAlignment.BottomLeft;
             // 
-            // btn_digital_set
-            // 
-            this.btn_digital_set.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_digital_set.BackgroundImage")));
-            this.btn_digital_set.Enabled = false;
-            this.btn_digital_set.Location = new System.Drawing.Point(65, 435);
-            this.btn_digital_set.Name = "btn_digital_set";
-            this.btn_digital_set.Size = new System.Drawing.Size(121, 29);
-            this.btn_digital_set.TabIndex = 99;
-            this.btn_digital_set.UseVisualStyleBackColor = true;
-            this.btn_digital_set.Click += new System.EventHandler(this.btn_digital_set_Click);
-            // 
-            // Arrow_Com_pb
-            // 
-            this.Arrow_Com_pb.BackColor = System.Drawing.Color.Transparent;
-            this.Arrow_Com_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
-            this.Arrow_Com_pb.Location = new System.Drawing.Point(121, 420);
-            this.Arrow_Com_pb.Name = "Arrow_Com_pb";
-            this.Arrow_Com_pb.Size = new System.Drawing.Size(9, 12);
-            this.Arrow_Com_pb.TabIndex = 115;
-            this.Arrow_Com_pb.TabStop = false;
-            this.Arrow_Com_pb.Visible = false;
-            // 
-            // Arrow_Mouse1_pb
-            // 
-            this.Arrow_Mouse1_pb.BackColor = System.Drawing.Color.Transparent;
-            this.Arrow_Mouse1_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
-            this.Arrow_Mouse1_pb.Location = new System.Drawing.Point(11, 447);
-            this.Arrow_Mouse1_pb.Name = "Arrow_Mouse1_pb";
-            this.Arrow_Mouse1_pb.Size = new System.Drawing.Size(9, 12);
-            this.Arrow_Mouse1_pb.TabIndex = 133;
-            this.Arrow_Mouse1_pb.TabStop = false;
-            this.Arrow_Mouse1_pb.Visible = false;
-            // 
-            // Arrow_Mouse2_pb
-            // 
-            this.Arrow_Mouse2_pb.BackColor = System.Drawing.Color.Transparent;
-            this.Arrow_Mouse2_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
-            this.Arrow_Mouse2_pb.Location = new System.Drawing.Point(26, 447);
-            this.Arrow_Mouse2_pb.Name = "Arrow_Mouse2_pb";
-            this.Arrow_Mouse2_pb.Size = new System.Drawing.Size(9, 12);
-            this.Arrow_Mouse2_pb.TabIndex = 135;
-            this.Arrow_Mouse2_pb.TabStop = false;
-            this.Arrow_Mouse2_pb.Visible = false;
-            // 
-            // Arrow_Mouse3_pb
-            // 
-            this.Arrow_Mouse3_pb.BackColor = System.Drawing.Color.Transparent;
-            this.Arrow_Mouse3_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
-            this.Arrow_Mouse3_pb.Location = new System.Drawing.Point(40, 447);
-            this.Arrow_Mouse3_pb.Name = "Arrow_Mouse3_pb";
-            this.Arrow_Mouse3_pb.Size = new System.Drawing.Size(9, 12);
-            this.Arrow_Mouse3_pb.TabIndex = 137;
-            this.Arrow_Mouse3_pb.TabStop = false;
-            this.Arrow_Mouse3_pb.Visible = false;
-            // 
-            // Arrow_Keyboard_pb
-            // 
-            this.Arrow_Keyboard_pb.BackColor = System.Drawing.Color.Transparent;
-            this.Arrow_Keyboard_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
-            this.Arrow_Keyboard_pb.Location = new System.Drawing.Point(198, 441);
-            this.Arrow_Keyboard_pb.Name = "Arrow_Keyboard_pb";
-            this.Arrow_Keyboard_pb.Size = new System.Drawing.Size(9, 12);
-            this.Arrow_Keyboard_pb.TabIndex = 114;
-            this.Arrow_Keyboard_pb.TabStop = false;
-            this.Arrow_Keyboard_pb.Visible = false;
-            // 
             // listView1
             // 
             this.listView1.BackColor = System.Drawing.Color.Silver;
@@ -2447,6 +2189,66 @@ namespace ReviveUSBAdvance
             this.pnl_analog_setting.Size = new System.Drawing.Size(260, 475);
             this.pnl_analog_setting.TabIndex = 1012;
             // 
+            // pic_analog_arrow5
+            // 
+            this.pic_analog_arrow5.BackColor = System.Drawing.Color.Transparent;
+            this.pic_analog_arrow5.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
+            this.pic_analog_arrow5.Location = new System.Drawing.Point(106, 257);
+            this.pic_analog_arrow5.Name = "pic_analog_arrow5";
+            this.pic_analog_arrow5.Size = new System.Drawing.Size(12, 9);
+            this.pic_analog_arrow5.TabIndex = 254;
+            this.pic_analog_arrow5.TabStop = false;
+            // 
+            // pic_analog_arrow4
+            // 
+            this.pic_analog_arrow4.BackColor = System.Drawing.Color.Transparent;
+            this.pic_analog_arrow4.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
+            this.pic_analog_arrow4.Location = new System.Drawing.Point(106, 232);
+            this.pic_analog_arrow4.Name = "pic_analog_arrow4";
+            this.pic_analog_arrow4.Size = new System.Drawing.Size(12, 9);
+            this.pic_analog_arrow4.TabIndex = 253;
+            this.pic_analog_arrow4.TabStop = false;
+            // 
+            // pic_analog_arrow3
+            // 
+            this.pic_analog_arrow3.BackColor = System.Drawing.Color.Transparent;
+            this.pic_analog_arrow3.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
+            this.pic_analog_arrow3.Location = new System.Drawing.Point(106, 197);
+            this.pic_analog_arrow3.Name = "pic_analog_arrow3";
+            this.pic_analog_arrow3.Size = new System.Drawing.Size(12, 9);
+            this.pic_analog_arrow3.TabIndex = 252;
+            this.pic_analog_arrow3.TabStop = false;
+            // 
+            // pic_analog_arrow2
+            // 
+            this.pic_analog_arrow2.BackColor = System.Drawing.Color.Transparent;
+            this.pic_analog_arrow2.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
+            this.pic_analog_arrow2.Location = new System.Drawing.Point(106, 162);
+            this.pic_analog_arrow2.Name = "pic_analog_arrow2";
+            this.pic_analog_arrow2.Size = new System.Drawing.Size(12, 9);
+            this.pic_analog_arrow2.TabIndex = 251;
+            this.pic_analog_arrow2.TabStop = false;
+            // 
+            // pic_analog_arrow1
+            // 
+            this.pic_analog_arrow1.BackColor = System.Drawing.Color.Transparent;
+            this.pic_analog_arrow1.Image = global::Revive_USB_Advance_CT.Properties.Resources.A_arrow;
+            this.pic_analog_arrow1.Location = new System.Drawing.Point(106, 137);
+            this.pic_analog_arrow1.Name = "pic_analog_arrow1";
+            this.pic_analog_arrow1.Size = new System.Drawing.Size(12, 9);
+            this.pic_analog_arrow1.TabIndex = 201;
+            this.pic_analog_arrow1.TabStop = false;
+            // 
+            // btn_analog_set
+            // 
+            this.btn_analog_set.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_analog_set.BackgroundImage")));
+            this.btn_analog_set.Location = new System.Drawing.Point(65, 435);
+            this.btn_analog_set.Name = "btn_analog_set";
+            this.btn_analog_set.Size = new System.Drawing.Size(121, 29);
+            this.btn_analog_set.TabIndex = 250;
+            this.btn_analog_set.UseVisualStyleBackColor = true;
+            this.btn_analog_set.Click += new System.EventHandler(this.btn_analog_set_Click);
+            // 
             // pnl_digital_setting
             // 
             this.pnl_digital_setting.BackColor = System.Drawing.Color.White;
@@ -2508,6 +2310,72 @@ namespace ReviveUSBAdvance
             this.pnl_digital_setting.Size = new System.Drawing.Size(260, 475);
             this.pnl_digital_setting.TabIndex = 1013;
             // 
+            // Arrow_Keyboard_pb
+            // 
+            this.Arrow_Keyboard_pb.BackColor = System.Drawing.Color.Transparent;
+            this.Arrow_Keyboard_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
+            this.Arrow_Keyboard_pb.Location = new System.Drawing.Point(198, 441);
+            this.Arrow_Keyboard_pb.Name = "Arrow_Keyboard_pb";
+            this.Arrow_Keyboard_pb.Size = new System.Drawing.Size(9, 12);
+            this.Arrow_Keyboard_pb.TabIndex = 114;
+            this.Arrow_Keyboard_pb.TabStop = false;
+            this.Arrow_Keyboard_pb.Visible = false;
+            // 
+            // Arrow_Mouse3_pb
+            // 
+            this.Arrow_Mouse3_pb.BackColor = System.Drawing.Color.Transparent;
+            this.Arrow_Mouse3_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
+            this.Arrow_Mouse3_pb.Location = new System.Drawing.Point(40, 447);
+            this.Arrow_Mouse3_pb.Name = "Arrow_Mouse3_pb";
+            this.Arrow_Mouse3_pb.Size = new System.Drawing.Size(9, 12);
+            this.Arrow_Mouse3_pb.TabIndex = 137;
+            this.Arrow_Mouse3_pb.TabStop = false;
+            this.Arrow_Mouse3_pb.Visible = false;
+            // 
+            // Arrow_Mouse2_pb
+            // 
+            this.Arrow_Mouse2_pb.BackColor = System.Drawing.Color.Transparent;
+            this.Arrow_Mouse2_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
+            this.Arrow_Mouse2_pb.Location = new System.Drawing.Point(26, 447);
+            this.Arrow_Mouse2_pb.Name = "Arrow_Mouse2_pb";
+            this.Arrow_Mouse2_pb.Size = new System.Drawing.Size(9, 12);
+            this.Arrow_Mouse2_pb.TabIndex = 135;
+            this.Arrow_Mouse2_pb.TabStop = false;
+            this.Arrow_Mouse2_pb.Visible = false;
+            // 
+            // Arrow_Mouse1_pb
+            // 
+            this.Arrow_Mouse1_pb.BackColor = System.Drawing.Color.Transparent;
+            this.Arrow_Mouse1_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
+            this.Arrow_Mouse1_pb.Location = new System.Drawing.Point(11, 447);
+            this.Arrow_Mouse1_pb.Name = "Arrow_Mouse1_pb";
+            this.Arrow_Mouse1_pb.Size = new System.Drawing.Size(9, 12);
+            this.Arrow_Mouse1_pb.TabIndex = 133;
+            this.Arrow_Mouse1_pb.TabStop = false;
+            this.Arrow_Mouse1_pb.Visible = false;
+            // 
+            // Arrow_Com_pb
+            // 
+            this.Arrow_Com_pb.BackColor = System.Drawing.Color.Transparent;
+            this.Arrow_Com_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.F_arrow;
+            this.Arrow_Com_pb.Location = new System.Drawing.Point(121, 420);
+            this.Arrow_Com_pb.Name = "Arrow_Com_pb";
+            this.Arrow_Com_pb.Size = new System.Drawing.Size(9, 12);
+            this.Arrow_Com_pb.TabIndex = 115;
+            this.Arrow_Com_pb.TabStop = false;
+            this.Arrow_Com_pb.Visible = false;
+            // 
+            // btn_digital_set
+            // 
+            this.btn_digital_set.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_digital_set.BackgroundImage")));
+            this.btn_digital_set.Enabled = false;
+            this.btn_digital_set.Location = new System.Drawing.Point(65, 435);
+            this.btn_digital_set.Name = "btn_digital_set";
+            this.btn_digital_set.Size = new System.Drawing.Size(121, 29);
+            this.btn_digital_set.TabIndex = 99;
+            this.btn_digital_set.UseVisualStyleBackColor = true;
+            this.btn_digital_set.Click += new System.EventHandler(this.btn_digital_set_Click);
+            // 
             // Revive_Advance_Device_pb
             // 
             this.Revive_Advance_Device_pb.BackgroundImage = global::Revive_USB_Advance_CT.Properties.Resources.AD_MAIN_OFF;
@@ -2556,77 +2424,77 @@ namespace ReviveUSBAdvance
             this.ana_tabB_pb.TabStop = false;
             this.ana_tabB_pb.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ana_tabB_pb_MouseClick);
             // 
-            // PinAN08A_pb
+            // Pin21A_pb
             // 
-            this.PinAN08A_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN08A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A08_ON;
-            this.PinAN08A_pb.Location = new System.Drawing.Point(592, 344);
-            this.PinAN08A_pb.Name = "PinAN08A_pb";
-            this.PinAN08A_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN08A_pb.TabIndex = 999;
-            this.PinAN08A_pb.TabStop = false;
-            this.PinAN08A_pb.Tag = "7";
-            this.PinAN08A_pb.Visible = false;
+            this.Pin21A_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin21A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D21_ON;
+            this.Pin21A_pb.Location = new System.Drawing.Point(592, 344);
+            this.Pin21A_pb.Name = "Pin21A_pb";
+            this.Pin21A_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin21A_pb.TabIndex = 999;
+            this.Pin21A_pb.TabStop = false;
+            this.Pin21A_pb.Tag = "7";
+            this.Pin21A_pb.Visible = false;
             // 
-            // PinAN07A_pb
+            // Pin20A_pb
             // 
-            this.PinAN07A_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN07A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A07_ON;
-            this.PinAN07A_pb.Location = new System.Drawing.Point(567, 344);
-            this.PinAN07A_pb.Name = "PinAN07A_pb";
-            this.PinAN07A_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN07A_pb.TabIndex = 998;
-            this.PinAN07A_pb.TabStop = false;
-            this.PinAN07A_pb.Tag = "6";
-            this.PinAN07A_pb.Visible = false;
+            this.Pin20A_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin20A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D20_ON;
+            this.Pin20A_pb.Location = new System.Drawing.Point(567, 344);
+            this.Pin20A_pb.Name = "Pin20A_pb";
+            this.Pin20A_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin20A_pb.TabIndex = 998;
+            this.Pin20A_pb.TabStop = false;
+            this.Pin20A_pb.Tag = "6";
+            this.Pin20A_pb.Visible = false;
             // 
-            // PinAN06A_pb
+            // Pin19A_pb
             // 
-            this.PinAN06A_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN06A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A06_ON;
-            this.PinAN06A_pb.Location = new System.Drawing.Point(542, 344);
-            this.PinAN06A_pb.Name = "PinAN06A_pb";
-            this.PinAN06A_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN06A_pb.TabIndex = 997;
-            this.PinAN06A_pb.TabStop = false;
-            this.PinAN06A_pb.Tag = "5";
-            this.PinAN06A_pb.Visible = false;
+            this.Pin19A_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin19A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D19_ON;
+            this.Pin19A_pb.Location = new System.Drawing.Point(542, 344);
+            this.Pin19A_pb.Name = "Pin19A_pb";
+            this.Pin19A_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin19A_pb.TabIndex = 997;
+            this.Pin19A_pb.TabStop = false;
+            this.Pin19A_pb.Tag = "5";
+            this.Pin19A_pb.Visible = false;
             // 
-            // PinAN05A_pb
+            // Pin18A_pb
             // 
-            this.PinAN05A_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN05A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A05_ON;
-            this.PinAN05A_pb.Location = new System.Drawing.Point(443, 344);
-            this.PinAN05A_pb.Name = "PinAN05A_pb";
-            this.PinAN05A_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN05A_pb.TabIndex = 996;
-            this.PinAN05A_pb.TabStop = false;
-            this.PinAN05A_pb.Tag = "4";
-            this.PinAN05A_pb.Visible = false;
+            this.Pin18A_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin18A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D18_ON;
+            this.Pin18A_pb.Location = new System.Drawing.Point(443, 344);
+            this.Pin18A_pb.Name = "Pin18A_pb";
+            this.Pin18A_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin18A_pb.TabIndex = 996;
+            this.Pin18A_pb.TabStop = false;
+            this.Pin18A_pb.Tag = "4";
+            this.Pin18A_pb.Visible = false;
             // 
-            // PinAN04A_pb
+            // Pin17A_pb
             // 
-            this.PinAN04A_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN04A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A04_ON;
-            this.PinAN04A_pb.Location = new System.Drawing.Point(418, 344);
-            this.PinAN04A_pb.Name = "PinAN04A_pb";
-            this.PinAN04A_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN04A_pb.TabIndex = 995;
-            this.PinAN04A_pb.TabStop = false;
-            this.PinAN04A_pb.Tag = "3";
-            this.PinAN04A_pb.Visible = false;
+            this.Pin17A_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin17A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D17_ON;
+            this.Pin17A_pb.Location = new System.Drawing.Point(418, 344);
+            this.Pin17A_pb.Name = "Pin17A_pb";
+            this.Pin17A_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin17A_pb.TabIndex = 995;
+            this.Pin17A_pb.TabStop = false;
+            this.Pin17A_pb.Tag = "3";
+            this.Pin17A_pb.Visible = false;
             // 
-            // PinAN03A_pb
+            // Pin16A_pb
             // 
-            this.PinAN03A_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN03A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A03_ON;
-            this.PinAN03A_pb.Location = new System.Drawing.Point(393, 344);
-            this.PinAN03A_pb.Name = "PinAN03A_pb";
-            this.PinAN03A_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN03A_pb.TabIndex = 994;
-            this.PinAN03A_pb.TabStop = false;
-            this.PinAN03A_pb.Tag = "2";
-            this.PinAN03A_pb.Visible = false;
+            this.Pin16A_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin16A_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D16_ON;
+            this.Pin16A_pb.Location = new System.Drawing.Point(393, 344);
+            this.Pin16A_pb.Name = "Pin16A_pb";
+            this.Pin16A_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin16A_pb.TabIndex = 994;
+            this.Pin16A_pb.TabStop = false;
+            this.Pin16A_pb.Tag = "2";
+            this.Pin16A_pb.Visible = false;
             // 
             // PinAN02A_pb
             // 
@@ -2652,77 +2520,77 @@ namespace ReviveUSBAdvance
             this.PinAN01A_pb.Tag = "0";
             this.PinAN01A_pb.Visible = false;
             // 
-            // PinAN08B_pb
+            // Pin21B_pb
             // 
-            this.PinAN08B_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN08B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A08_OFF;
-            this.PinAN08B_pb.Location = new System.Drawing.Point(592, 344);
-            this.PinAN08B_pb.Name = "PinAN08B_pb";
-            this.PinAN08B_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN08B_pb.TabIndex = 1007;
-            this.PinAN08B_pb.TabStop = false;
-            this.PinAN08B_pb.Tag = "7";
-            this.PinAN08B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
+            this.Pin21B_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin21B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D21_OFF;
+            this.Pin21B_pb.Location = new System.Drawing.Point(592, 344);
+            this.Pin21B_pb.Name = "Pin21B_pb";
+            this.Pin21B_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin21B_pb.TabIndex = 1007;
+            this.Pin21B_pb.TabStop = false;
+            this.Pin21B_pb.Tag = "7";
+            this.Pin21B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
             // 
-            // PinAN07B_pb
+            // Pin20B_pb
             // 
-            this.PinAN07B_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN07B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A07_OFF;
-            this.PinAN07B_pb.Location = new System.Drawing.Point(567, 344);
-            this.PinAN07B_pb.Name = "PinAN07B_pb";
-            this.PinAN07B_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN07B_pb.TabIndex = 1006;
-            this.PinAN07B_pb.TabStop = false;
-            this.PinAN07B_pb.Tag = "6";
-            this.PinAN07B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
+            this.Pin20B_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin20B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D20_OFF;
+            this.Pin20B_pb.Location = new System.Drawing.Point(567, 344);
+            this.Pin20B_pb.Name = "Pin20B_pb";
+            this.Pin20B_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin20B_pb.TabIndex = 1006;
+            this.Pin20B_pb.TabStop = false;
+            this.Pin20B_pb.Tag = "6";
+            this.Pin20B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
             // 
-            // PinAN06B_pb
+            // Pin19B_pb
             // 
-            this.PinAN06B_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN06B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A06_OFF;
-            this.PinAN06B_pb.Location = new System.Drawing.Point(542, 344);
-            this.PinAN06B_pb.Name = "PinAN06B_pb";
-            this.PinAN06B_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN06B_pb.TabIndex = 1005;
-            this.PinAN06B_pb.TabStop = false;
-            this.PinAN06B_pb.Tag = "5";
-            this.PinAN06B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
+            this.Pin19B_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin19B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D19_OFF;
+            this.Pin19B_pb.Location = new System.Drawing.Point(542, 344);
+            this.Pin19B_pb.Name = "Pin19B_pb";
+            this.Pin19B_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin19B_pb.TabIndex = 1005;
+            this.Pin19B_pb.TabStop = false;
+            this.Pin19B_pb.Tag = "5";
+            this.Pin19B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
             // 
-            // PinAN05B_pb
+            // Pin18B_pb
             // 
-            this.PinAN05B_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN05B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A05_OFF;
-            this.PinAN05B_pb.Location = new System.Drawing.Point(443, 344);
-            this.PinAN05B_pb.Name = "PinAN05B_pb";
-            this.PinAN05B_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN05B_pb.TabIndex = 1004;
-            this.PinAN05B_pb.TabStop = false;
-            this.PinAN05B_pb.Tag = "4";
-            this.PinAN05B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
+            this.Pin18B_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin18B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D18_OFF;
+            this.Pin18B_pb.Location = new System.Drawing.Point(443, 344);
+            this.Pin18B_pb.Name = "Pin18B_pb";
+            this.Pin18B_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin18B_pb.TabIndex = 1004;
+            this.Pin18B_pb.TabStop = false;
+            this.Pin18B_pb.Tag = "4";
+            this.Pin18B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
             // 
-            // PinAN04B_pb
+            // Pin17B_pb
             // 
-            this.PinAN04B_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN04B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A04_OFF;
-            this.PinAN04B_pb.Location = new System.Drawing.Point(418, 344);
-            this.PinAN04B_pb.Name = "PinAN04B_pb";
-            this.PinAN04B_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN04B_pb.TabIndex = 1003;
-            this.PinAN04B_pb.TabStop = false;
-            this.PinAN04B_pb.Tag = "3";
-            this.PinAN04B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
+            this.Pin17B_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin17B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D17_OFF;
+            this.Pin17B_pb.Location = new System.Drawing.Point(418, 344);
+            this.Pin17B_pb.Name = "Pin17B_pb";
+            this.Pin17B_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin17B_pb.TabIndex = 1003;
+            this.Pin17B_pb.TabStop = false;
+            this.Pin17B_pb.Tag = "3";
+            this.Pin17B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
             // 
-            // PinAN03B_pb
+            // Pin16B_pb
             // 
-            this.PinAN03B_pb.BackColor = System.Drawing.SystemColors.Control;
-            this.PinAN03B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_A03_OFF;
-            this.PinAN03B_pb.Location = new System.Drawing.Point(393, 344);
-            this.PinAN03B_pb.Name = "PinAN03B_pb";
-            this.PinAN03B_pb.Size = new System.Drawing.Size(25, 42);
-            this.PinAN03B_pb.TabIndex = 1002;
-            this.PinAN03B_pb.TabStop = false;
-            this.PinAN03B_pb.Tag = "2";
-            this.PinAN03B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
+            this.Pin16B_pb.BackColor = System.Drawing.SystemColors.Control;
+            this.Pin16B_pb.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_D16_OFF;
+            this.Pin16B_pb.Location = new System.Drawing.Point(393, 344);
+            this.Pin16B_pb.Name = "Pin16B_pb";
+            this.Pin16B_pb.Size = new System.Drawing.Size(25, 42);
+            this.Pin16B_pb.TabIndex = 1002;
+            this.Pin16B_pb.TabStop = false;
+            this.Pin16B_pb.Tag = "2";
+            this.Pin16B_pb.Click += new System.EventHandler(this.AnalogPIN_Click);
             // 
             // PinAN02B_pb
             // 
@@ -3315,10 +3183,238 @@ namespace ReviveUSBAdvance
             this.BackGround_pb.TabIndex = 163;
             this.BackGround_pb.TabStop = false;
             // 
+            // ButtonPressIcon16
+            // 
+            this.ButtonPressIcon16.BackColor = System.Drawing.Color.White;
+            this.ButtonPressIcon16.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_ON;
+            this.ButtonPressIcon16.Location = new System.Drawing.Point(394, 388);
+            this.ButtonPressIcon16.Name = "ButtonPressIcon16";
+            this.ButtonPressIcon16.Size = new System.Drawing.Size(25, 13);
+            this.ButtonPressIcon16.TabIndex = 1015;
+            this.ButtonPressIcon16.TabStop = false;
+            this.ButtonPressIcon16.Visible = false;
+            // 
+            // ButtonPressIcon17
+            // 
+            this.ButtonPressIcon17.BackColor = System.Drawing.Color.White;
+            this.ButtonPressIcon17.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_ON;
+            this.ButtonPressIcon17.Location = new System.Drawing.Point(420, 388);
+            this.ButtonPressIcon17.Name = "ButtonPressIcon17";
+            this.ButtonPressIcon17.Size = new System.Drawing.Size(25, 13);
+            this.ButtonPressIcon17.TabIndex = 1016;
+            this.ButtonPressIcon17.TabStop = false;
+            this.ButtonPressIcon17.Visible = false;
+            // 
+            // ButtonPressIcon18
+            // 
+            this.ButtonPressIcon18.BackColor = System.Drawing.Color.White;
+            this.ButtonPressIcon18.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_ON;
+            this.ButtonPressIcon18.Location = new System.Drawing.Point(444, 388);
+            this.ButtonPressIcon18.Name = "ButtonPressIcon18";
+            this.ButtonPressIcon18.Size = new System.Drawing.Size(25, 13);
+            this.ButtonPressIcon18.TabIndex = 1017;
+            this.ButtonPressIcon18.TabStop = false;
+            this.ButtonPressIcon18.Visible = false;
+            // 
+            // ButtonPressIcon19
+            // 
+            this.ButtonPressIcon19.BackColor = System.Drawing.Color.White;
+            this.ButtonPressIcon19.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_ON;
+            this.ButtonPressIcon19.Location = new System.Drawing.Point(541, 388);
+            this.ButtonPressIcon19.Name = "ButtonPressIcon19";
+            this.ButtonPressIcon19.Size = new System.Drawing.Size(25, 13);
+            this.ButtonPressIcon19.TabIndex = 1018;
+            this.ButtonPressIcon19.TabStop = false;
+            this.ButtonPressIcon19.Visible = false;
+            // 
+            // ButtonPressIcon20
+            // 
+            this.ButtonPressIcon20.BackColor = System.Drawing.Color.White;
+            this.ButtonPressIcon20.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_ON;
+            this.ButtonPressIcon20.Location = new System.Drawing.Point(567, 388);
+            this.ButtonPressIcon20.Name = "ButtonPressIcon20";
+            this.ButtonPressIcon20.Size = new System.Drawing.Size(25, 13);
+            this.ButtonPressIcon20.TabIndex = 1019;
+            this.ButtonPressIcon20.TabStop = false;
+            this.ButtonPressIcon20.Visible = false;
+            // 
+            // ButtonPressIcon21
+            // 
+            this.ButtonPressIcon21.BackColor = System.Drawing.Color.White;
+            this.ButtonPressIcon21.Image = global::Revive_USB_Advance_CT.Properties.Resources.AD_ON;
+            this.ButtonPressIcon21.Location = new System.Drawing.Point(592, 388);
+            this.ButtonPressIcon21.Name = "ButtonPressIcon21";
+            this.ButtonPressIcon21.Size = new System.Drawing.Size(25, 13);
+            this.ButtonPressIcon21.TabIndex = 1020;
+            this.ButtonPressIcon21.TabStop = false;
+            this.ButtonPressIcon21.Visible = false;
+            // 
+            // DeviceAssign_lbl16
+            // 
+            this.DeviceAssign_lbl16.AutoSize = true;
+            this.DeviceAssign_lbl16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.DeviceAssign_lbl16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.DeviceAssign_lbl16.Location = new System.Drawing.Point(1186, 215);
+            this.DeviceAssign_lbl16.Name = "DeviceAssign_lbl16";
+            this.DeviceAssign_lbl16.Size = new System.Drawing.Size(40, 12);
+            this.DeviceAssign_lbl16.TabIndex = 1022;
+            this.DeviceAssign_lbl16.Tag = "14";
+            this.DeviceAssign_lbl16.Text = "Assign";
+            // 
+            // devicetype_lbl16
+            // 
+            this.devicetype_lbl16.AutoSize = true;
+            this.devicetype_lbl16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.devicetype_lbl16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.devicetype_lbl16.Location = new System.Drawing.Point(1186, 203);
+            this.devicetype_lbl16.Name = "devicetype_lbl16";
+            this.devicetype_lbl16.Size = new System.Drawing.Size(33, 12);
+            this.devicetype_lbl16.TabIndex = 1021;
+            this.devicetype_lbl16.Tag = "14";
+            this.devicetype_lbl16.Text = "16Pin";
+            // 
+            // DeviceAssign_lbl17
+            // 
+            this.DeviceAssign_lbl17.AutoSize = true;
+            this.DeviceAssign_lbl17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.DeviceAssign_lbl17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.DeviceAssign_lbl17.Location = new System.Drawing.Point(1186, 249);
+            this.DeviceAssign_lbl17.Name = "DeviceAssign_lbl17";
+            this.DeviceAssign_lbl17.Size = new System.Drawing.Size(40, 12);
+            this.DeviceAssign_lbl17.TabIndex = 1024;
+            this.DeviceAssign_lbl17.Tag = "14";
+            this.DeviceAssign_lbl17.Text = "Assign";
+            // 
+            // devicetype_lbl17
+            // 
+            this.devicetype_lbl17.AutoSize = true;
+            this.devicetype_lbl17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.devicetype_lbl17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.devicetype_lbl17.Location = new System.Drawing.Point(1186, 237);
+            this.devicetype_lbl17.Name = "devicetype_lbl17";
+            this.devicetype_lbl17.Size = new System.Drawing.Size(33, 12);
+            this.devicetype_lbl17.TabIndex = 1023;
+            this.devicetype_lbl17.Tag = "14";
+            this.devicetype_lbl17.Text = "17Pin";
+            // 
+            // DeviceAssign_lbl18
+            // 
+            this.DeviceAssign_lbl18.AutoSize = true;
+            this.DeviceAssign_lbl18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.DeviceAssign_lbl18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.DeviceAssign_lbl18.Location = new System.Drawing.Point(1186, 280);
+            this.DeviceAssign_lbl18.Name = "DeviceAssign_lbl18";
+            this.DeviceAssign_lbl18.Size = new System.Drawing.Size(40, 12);
+            this.DeviceAssign_lbl18.TabIndex = 1026;
+            this.DeviceAssign_lbl18.Tag = "14";
+            this.DeviceAssign_lbl18.Text = "Assign";
+            // 
+            // devicetype_lbl18
+            // 
+            this.devicetype_lbl18.AutoSize = true;
+            this.devicetype_lbl18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.devicetype_lbl18.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.devicetype_lbl18.Location = new System.Drawing.Point(1186, 268);
+            this.devicetype_lbl18.Name = "devicetype_lbl18";
+            this.devicetype_lbl18.Size = new System.Drawing.Size(33, 12);
+            this.devicetype_lbl18.TabIndex = 1025;
+            this.devicetype_lbl18.Tag = "14";
+            this.devicetype_lbl18.Text = "18Pin";
+            // 
+            // DeviceAssign_lbl19
+            // 
+            this.DeviceAssign_lbl19.AutoSize = true;
+            this.DeviceAssign_lbl19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.DeviceAssign_lbl19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.DeviceAssign_lbl19.Location = new System.Drawing.Point(1249, 117);
+            this.DeviceAssign_lbl19.Name = "DeviceAssign_lbl19";
+            this.DeviceAssign_lbl19.Size = new System.Drawing.Size(40, 12);
+            this.DeviceAssign_lbl19.TabIndex = 1028;
+            this.DeviceAssign_lbl19.Tag = "14";
+            this.DeviceAssign_lbl19.Text = "Assign";
+            // 
+            // devicetype_lbl19
+            // 
+            this.devicetype_lbl19.AutoSize = true;
+            this.devicetype_lbl19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.devicetype_lbl19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.devicetype_lbl19.Location = new System.Drawing.Point(1249, 105);
+            this.devicetype_lbl19.Name = "devicetype_lbl19";
+            this.devicetype_lbl19.Size = new System.Drawing.Size(33, 12);
+            this.devicetype_lbl19.TabIndex = 1027;
+            this.devicetype_lbl19.Tag = "14";
+            this.devicetype_lbl19.Text = "19Pin";
+            // 
+            // DeviceAssign_lbl20
+            // 
+            this.DeviceAssign_lbl20.AutoSize = true;
+            this.DeviceAssign_lbl20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.DeviceAssign_lbl20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.DeviceAssign_lbl20.Location = new System.Drawing.Point(1249, 150);
+            this.DeviceAssign_lbl20.Name = "DeviceAssign_lbl20";
+            this.DeviceAssign_lbl20.Size = new System.Drawing.Size(40, 12);
+            this.DeviceAssign_lbl20.TabIndex = 1030;
+            this.DeviceAssign_lbl20.Tag = "14";
+            this.DeviceAssign_lbl20.Text = "Assign";
+            // 
+            // devicetype_lbl20
+            // 
+            this.devicetype_lbl20.AutoSize = true;
+            this.devicetype_lbl20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.devicetype_lbl20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.devicetype_lbl20.Location = new System.Drawing.Point(1249, 138);
+            this.devicetype_lbl20.Name = "devicetype_lbl20";
+            this.devicetype_lbl20.Size = new System.Drawing.Size(33, 12);
+            this.devicetype_lbl20.TabIndex = 1029;
+            this.devicetype_lbl20.Tag = "14";
+            this.devicetype_lbl20.Text = "20Pin";
+            // 
+            // DeviceAssign_lbl21
+            // 
+            this.DeviceAssign_lbl21.AutoSize = true;
+            this.DeviceAssign_lbl21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.DeviceAssign_lbl21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.DeviceAssign_lbl21.Location = new System.Drawing.Point(1249, 182);
+            this.DeviceAssign_lbl21.Name = "DeviceAssign_lbl21";
+            this.DeviceAssign_lbl21.Size = new System.Drawing.Size(40, 12);
+            this.DeviceAssign_lbl21.TabIndex = 1032;
+            this.DeviceAssign_lbl21.Tag = "14";
+            this.DeviceAssign_lbl21.Text = "Assign";
+            // 
+            // devicetype_lbl21
+            // 
+            this.devicetype_lbl21.AutoSize = true;
+            this.devicetype_lbl21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(219)))), ((int)(((byte)(221)))), ((int)(((byte)(223)))));
+            this.devicetype_lbl21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(106)))), ((int)(((byte)(106)))), ((int)(((byte)(106)))));
+            this.devicetype_lbl21.Location = new System.Drawing.Point(1249, 170);
+            this.devicetype_lbl21.Name = "devicetype_lbl21";
+            this.devicetype_lbl21.Size = new System.Drawing.Size(33, 12);
+            this.devicetype_lbl21.TabIndex = 1031;
+            this.devicetype_lbl21.Tag = "14";
+            this.devicetype_lbl21.Text = "21Pin";
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1344, 809);
+            this.ClientSize = new System.Drawing.Size(1334, 799);
+            this.Controls.Add(this.DeviceAssign_lbl21);
+            this.Controls.Add(this.devicetype_lbl21);
+            this.Controls.Add(this.DeviceAssign_lbl20);
+            this.Controls.Add(this.devicetype_lbl20);
+            this.Controls.Add(this.DeviceAssign_lbl19);
+            this.Controls.Add(this.devicetype_lbl19);
+            this.Controls.Add(this.DeviceAssign_lbl18);
+            this.Controls.Add(this.devicetype_lbl18);
+            this.Controls.Add(this.DeviceAssign_lbl17);
+            this.Controls.Add(this.devicetype_lbl17);
+            this.Controls.Add(this.DeviceAssign_lbl16);
+            this.Controls.Add(this.devicetype_lbl16);
+            this.Controls.Add(this.ButtonPressIcon21);
+            this.Controls.Add(this.ButtonPressIcon20);
+            this.Controls.Add(this.ButtonPressIcon19);
+            this.Controls.Add(this.ButtonPressIcon18);
+            this.Controls.Add(this.ButtonPressIcon17);
+            this.Controls.Add(this.ButtonPressIcon16);
             this.Controls.Add(this.pnl_analog_setting);
             this.Controls.Add(this.Revive_Advance_Device_pb);
             this.Controls.Add(this.pnl_digital_setting);
@@ -3326,20 +3422,20 @@ namespace ReviveUSBAdvance
             this.Controls.Add(this.ana_tabA_pb);
             this.Controls.Add(this.dig_tabB_pb);
             this.Controls.Add(this.ana_tabB_pb);
-            this.Controls.Add(this.PinAN08A_pb);
-            this.Controls.Add(this.PinAN07A_pb);
-            this.Controls.Add(this.PinAN06A_pb);
-            this.Controls.Add(this.PinAN05A_pb);
-            this.Controls.Add(this.PinAN04A_pb);
-            this.Controls.Add(this.PinAN03A_pb);
+            this.Controls.Add(this.Pin21A_pb);
+            this.Controls.Add(this.Pin20A_pb);
+            this.Controls.Add(this.Pin19A_pb);
+            this.Controls.Add(this.Pin18A_pb);
+            this.Controls.Add(this.Pin17A_pb);
+            this.Controls.Add(this.Pin16A_pb);
             this.Controls.Add(this.PinAN02A_pb);
             this.Controls.Add(this.PinAN01A_pb);
-            this.Controls.Add(this.PinAN08B_pb);
-            this.Controls.Add(this.PinAN07B_pb);
-            this.Controls.Add(this.PinAN06B_pb);
-            this.Controls.Add(this.PinAN05B_pb);
-            this.Controls.Add(this.PinAN04B_pb);
-            this.Controls.Add(this.PinAN03B_pb);
+            this.Controls.Add(this.Pin21B_pb);
+            this.Controls.Add(this.Pin20B_pb);
+            this.Controls.Add(this.Pin19B_pb);
+            this.Controls.Add(this.Pin18B_pb);
+            this.Controls.Add(this.Pin17B_pb);
+            this.Controls.Add(this.Pin16B_pb);
             this.Controls.Add(this.PinAN02B_pb);
             this.Controls.Add(this.PinAN01B_pb);
             this.Controls.Add(this.gbx_setting_list);
@@ -3347,18 +3443,6 @@ namespace ReviveUSBAdvance
             this.Controls.Add(this.Pin06B_pb);
             this.Controls.Add(this.btn_default_reset);
             this.Controls.Add(this.lbl_FW_Version);
-            this.Controls.Add(this.lbl_analog8_assign);
-            this.Controls.Add(this.lbl_analog8_status);
-            this.Controls.Add(this.lbl_analog7_assign);
-            this.Controls.Add(this.lbl_analog7_status);
-            this.Controls.Add(this.lbl_analog6_assign);
-            this.Controls.Add(this.lbl_analog6_status);
-            this.Controls.Add(this.lbl_analog5_assign);
-            this.Controls.Add(this.lbl_analog5_status);
-            this.Controls.Add(this.lbl_analog4_assign);
-            this.Controls.Add(this.lbl_analog4_status);
-            this.Controls.Add(this.lbl_analog3_assign);
-            this.Controls.Add(this.lbl_analog3_status);
             this.Controls.Add(this.lbl_analog2_assign);
             this.Controls.Add(this.lbl_analog2_status);
             this.Controls.Add(this.lbl_analog1_assign);
@@ -3458,11 +3542,6 @@ namespace ReviveUSBAdvance
             this.gbx_analog_calibration.ResumeLayout(false);
             this.gbx_analog_calibration.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.num_analog_dead_zone)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_output_val5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_output_val4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.num_input_vol4)).EndInit();
@@ -3476,35 +3555,40 @@ namespace ReviveUSBAdvance
             this.groupBox1.PerformLayout();
             this.groupBox5.ResumeLayout(false);
             this.groupBox5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Com_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse1_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse2_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse3_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Keyboard_pb)).EndInit();
             this.gbx_setting_list.ResumeLayout(false);
             this.pnl_analog_setting.ResumeLayout(false);
             this.pnl_analog_setting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pic_analog_arrow1)).EndInit();
             this.pnl_digital_setting.ResumeLayout(false);
             this.pnl_digital_setting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Keyboard_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse3_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse2_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Mouse1_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Arrow_Com_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Revive_Advance_Device_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dig_tabA_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ana_tabA_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dig_tabB_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ana_tabB_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN08A_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN07A_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN06A_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN05A_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN04A_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN03A_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin21A_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin20A_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin19A_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin18A_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin17A_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin16A_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PinAN02A_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PinAN01A_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN08B_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN07B_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN06B_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN05B_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN04B_pb)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.PinAN03B_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin21B_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin20B_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin19B_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin18B_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin17B_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Pin16B_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PinAN02B_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PinAN01B_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Pin06A_pb)).EndInit();
@@ -3556,6 +3640,12 @@ namespace ReviveUSBAdvance
             ((System.ComponentModel.ISupportInitialize)(this.Pin12B_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Status_NC_pb)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BackGround_pb)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon18)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon20)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ButtonPressIcon21)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -3728,18 +3818,6 @@ namespace ReviveUSBAdvance
         private System.Windows.Forms.Label lbl_analog1_assign;
         private System.Windows.Forms.Label lbl_analog2_assign;
         private System.Windows.Forms.Label lbl_analog2_status;
-        private System.Windows.Forms.Label lbl_analog3_assign;
-        private System.Windows.Forms.Label lbl_analog3_status;
-        private System.Windows.Forms.Label lbl_analog4_assign;
-        private System.Windows.Forms.Label lbl_analog4_status;
-        private System.Windows.Forms.Label lbl_analog8_assign;
-        private System.Windows.Forms.Label lbl_analog8_status;
-        private System.Windows.Forms.Label lbl_analog7_assign;
-        private System.Windows.Forms.Label lbl_analog7_status;
-        private System.Windows.Forms.Label lbl_analog6_assign;
-        private System.Windows.Forms.Label lbl_analog6_status;
-        private System.Windows.Forms.Label lbl_analog5_assign;
-        private System.Windows.Forms.Label lbl_analog5_status;
         private System.Windows.Forms.CheckBox hatsw_up_cbox;
         private System.Windows.Forms.CheckBox hatsw_right_cbox;
         private System.Windows.Forms.CheckBox hatsw_down_cbox;
@@ -3776,20 +3854,20 @@ namespace ReviveUSBAdvance
         private System.Windows.Forms.GroupBox gbx_setting_list;
         private System.Windows.Forms.PictureBox PinAN01A_pb;
         private System.Windows.Forms.PictureBox PinAN02A_pb;
-        private System.Windows.Forms.PictureBox PinAN03A_pb;
-        private System.Windows.Forms.PictureBox PinAN04A_pb;
-        private System.Windows.Forms.PictureBox PinAN05A_pb;
-        private System.Windows.Forms.PictureBox PinAN06A_pb;
-        private System.Windows.Forms.PictureBox PinAN07A_pb;
-        private System.Windows.Forms.PictureBox PinAN08A_pb;
+        private System.Windows.Forms.PictureBox Pin16A_pb;
+        private System.Windows.Forms.PictureBox Pin17A_pb;
+        private System.Windows.Forms.PictureBox Pin18A_pb;
+        private System.Windows.Forms.PictureBox Pin19A_pb;
+        private System.Windows.Forms.PictureBox Pin20A_pb;
+        private System.Windows.Forms.PictureBox Pin21A_pb;
         private System.Windows.Forms.PictureBox PinAN01B_pb;
         private System.Windows.Forms.PictureBox PinAN02B_pb;
-        private System.Windows.Forms.PictureBox PinAN03B_pb;
-        private System.Windows.Forms.PictureBox PinAN04B_pb;
-        private System.Windows.Forms.PictureBox PinAN05B_pb;
-        private System.Windows.Forms.PictureBox PinAN06B_pb;
-        private System.Windows.Forms.PictureBox PinAN07B_pb;
-        private System.Windows.Forms.PictureBox PinAN08B_pb;
+        private System.Windows.Forms.PictureBox Pin16B_pb;
+        private System.Windows.Forms.PictureBox Pin17B_pb;
+        private System.Windows.Forms.PictureBox Pin18B_pb;
+        private System.Windows.Forms.PictureBox Pin19B_pb;
+        private System.Windows.Forms.PictureBox Pin20B_pb;
+        private System.Windows.Forms.PictureBox Pin21B_pb;
         private System.Windows.Forms.PictureBox ana_tabA_pb;
         private System.Windows.Forms.PictureBox ana_tabB_pb;
         private System.Windows.Forms.PictureBox dig_tabA_pb;
@@ -3797,6 +3875,24 @@ namespace ReviveUSBAdvance
         private System.Windows.Forms.Panel pnl_analog_setting;
         private System.Windows.Forms.Panel pnl_digital_setting;
         private System.Windows.Forms.PictureBox Revive_Advance_Device_pb;
+        private System.Windows.Forms.PictureBox ButtonPressIcon16;
+        private System.Windows.Forms.PictureBox ButtonPressIcon17;
+        private System.Windows.Forms.PictureBox ButtonPressIcon18;
+        private System.Windows.Forms.PictureBox ButtonPressIcon19;
+        private System.Windows.Forms.PictureBox ButtonPressIcon20;
+        private System.Windows.Forms.PictureBox ButtonPressIcon21;
+        private System.Windows.Forms.Label DeviceAssign_lbl16;
+        private System.Windows.Forms.Label devicetype_lbl16;
+        private System.Windows.Forms.Label DeviceAssign_lbl17;
+        private System.Windows.Forms.Label devicetype_lbl17;
+        private System.Windows.Forms.Label DeviceAssign_lbl18;
+        private System.Windows.Forms.Label devicetype_lbl18;
+        private System.Windows.Forms.Label DeviceAssign_lbl19;
+        private System.Windows.Forms.Label devicetype_lbl19;
+        private System.Windows.Forms.Label DeviceAssign_lbl20;
+        private System.Windows.Forms.Label devicetype_lbl20;
+        private System.Windows.Forms.Label DeviceAssign_lbl21;
+        private System.Windows.Forms.Label devicetype_lbl21;
     }
 }
 
